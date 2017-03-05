@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{933543BF-9CAF-4FA6-B846-E027F5050E17}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{9E63C7ED-37D8-4C97-97CE-67336BCC109D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -135,10 +135,10 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[StopienNaukowyConnection]"
+      DTS:refId="Package.ConnectionManagers[PraceDyplomoweConnection]"
       DTS:CreationName="ADO.NET:SQL"
       DTS:DTSID="{8E18D596-01C6-4739-8912-5902478A0EB3}"
-      DTS:ObjectName="StopienNaukowyConnection">
+      DTS:ObjectName="PraceDyplomoweConnection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN\SQLEXPRESS;Integrated Security=SSPI;Connect Timeout=30;" />
@@ -180,24 +180,96 @@
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TypStudiowConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C68CC8F3-B075-4866-B37C-D8FF21EAB739}"
+      DTS:ObjectName="TypStudiowConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\TypStudiow.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_TypStudiow"
+              DTS:DTSID="{715E5E2F-6855-4AF9-B9FA-BBD15F239580}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NazwaTypu"
+              DTS:DTSID="{67A88D0B-6F4D-4E1D-B1A0-6C2B92FC16CC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WydzialConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C859DBFA-B8C4-4EE4-BE24-4077B13A4D31}"
+      DTS:ObjectName="WydzialConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Wydzial.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Wydzial"
+              DTS:DTSID="{316D7797-6811-4230-8204-AB911FCD51E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NazwaWydzialu"
+              DTS:DTSID="{53F007C9-F4C1-4CDE-81C5-79971DA6EBA8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Execute T-SQL Statement Task"
+      DTS:refId="Package\CleanDb"
       DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
       DTS:Description="Execute T-SQL Statement Task"
       DTS:DTSID="{DFC53883-7EE6-4AE2-BC88-04E2D52E31A0}"
       DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute T-SQL Statement Task"
+      DTS:ObjectName="CleanDb"
       DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{8E18D596-01C6-4739-8912-5902478A0EB3}"
-          SQLTask:SqlStatementSource="USE [PraceDyplomowe]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[StopienNaukowy]&#xA;GO"
+          SQLTask:SqlStatementSource="USE [PraceDyplomowe]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[Osoba]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[StopienNaukowy]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[TypStudiow]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[Wydzial]&#xA;GO"
           SQLTask:ServerVersion="9"
           SQLTask:ExtendedLogging="True"
           SQLTask:LocalConnectionForLogging=""
@@ -907,6 +979,601 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ImportTypStudiow"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{d0b6f660-3c67-49e0-a84b-e94047f57246}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ImportTypStudiow"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ImportTypStudiow\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportTypStudiow\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[TypStudiowConnectionManager]"
+                  connectionManagerRefId="Package.ConnectionManagers[TypStudiowConnectionManager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].Columns[ID_TypStudiow]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_TypStudiow]"
+                      lineageId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].Columns[ID_TypStudiow]"
+                      name="ID_TypStudiow"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].Columns[NazwaTypu]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NazwaTypu]"
+                      length="13"
+                      lineageId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].Columns[NazwaTypu]"
+                      name="NazwaTypu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_TypStudiow]"
+                      dataType="i2"
+                      name="ID_TypStudiow" />
+                    <externalMetadataColumn
+                      refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NazwaTypu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="13"
+                      name="NazwaTypu" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportTypStudiow\SQL Server Destination"
+              componentClassID="Microsoft.SQLServerDestination"
+              contactInfo="SQL Server Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+              description="SQL Server Destination"
+              name="SQL Server Destination"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the database object to copy data into."
+                  expressionType="Notify"
+                  name="BulkInsertTableName">[dbo].[TypStudiow]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
+                  name="BulkInsertCheckConstraints">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the first row to copy. Corresponds to the bulk insert FIRSTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertFirstRow">-1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any insert triggers defined on the destination object will execute during the data copy. Corresponds to the bulk insert FIRE_TRIGGERS option."
+                  name="BulkInsertFireTriggers">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Corresponds to the bulk insert KEEPIDENTITY option."
+                  name="BulkInsertKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null copied to the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="BulkInsertKeepNulls">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the last row to copy. Corresponds to the bulk insert LASTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertLastRow">-1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of syntax errors and compilation errors that can occur before the data copy operation is canceled. Each row that cannot be copied is ignored and counted as one error. Corresponds to the bulk insert MAXERRORS option."
+                  name="BulkInsertMaxErrors">-1</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies how the data to be copied is sorted. Corresponds to the bulk insert ORDER option."
+                  expressionType="Notify"
+                  name="BulkInsertOrder"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that a table-level lock is acquired for the duration of the data copy operation. Corresponds to the bulk insert TABLOCK option."
+                  name="BulkInsertTablock">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
+                  expressionType="Notify"
+                  name="Timeout">30</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
+                  name="MaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportTypStudiow\SQL Server Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ImportTypStudiow\SQL Server Destination.Inputs[SQL Server Destination Input]"
+                  hasSideEffects="true"
+                  name="SQL Server Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportTypStudiow\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ID_TypStudiow]"
+                      cachedDataType="i2"
+                      cachedName="ID_TypStudiow"
+                      externalMetadataColumnId="Package\ImportTypStudiow\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_TypStudiow]"
+                      lineageId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].Columns[ID_TypStudiow]" />
+                    <inputColumn
+                      refId="Package\ImportTypStudiow\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[NazwaTypu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="NazwaTypu"
+                      externalMetadataColumnId="Package\ImportTypStudiow\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[NazwaTypu]"
+                      lineageId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output].Columns[NazwaTypu]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportTypStudiow\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_TypStudiow]"
+                      dataType="i2"
+                      name="ID_TypStudiow" />
+                    <externalMetadataColumn
+                      refId="Package\ImportTypStudiow\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[NazwaTypu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="NazwaTypu" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ImportTypStudiow.Paths[Flat File Source Output]"
+              endId="Package\ImportTypStudiow\SQL Server Destination.Inputs[SQL Server Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\ImportTypStudiow\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ImportWydzial"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{052de2fa-53e3-4881-b2bb-ab3df371d07e}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ImportWydzial"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ImportWydzial\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ImportWydzial\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportWydzial\Derived Column.Inputs[Derived Column Input].Columns[NazwaWydzialu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NazwaWydzialu"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].Columns[NazwaWydzialu]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM](#{Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].Columns[NazwaWydzialu]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(NazwaWydzialu)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ImportWydzial\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ImportWydzial\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ImportWydzial\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ImportWydzial\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportWydzial\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportWydzial\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportWydzial\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportWydzial\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportWydzial\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportWydzial\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[WydzialConnectionManager]"
+                  connectionManagerRefId="Package.ConnectionManagers[WydzialConnectionManager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Wydzial]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Wydzial]"
+                      lineageId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Wydzial]"
+                      name="ID_Wydzial"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].Columns[NazwaWydzialu]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NazwaWydzialu]"
+                      length="50"
+                      lineageId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].Columns[NazwaWydzialu]"
+                      name="NazwaWydzialu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Wydzial]"
+                      dataType="i2"
+                      name="ID_Wydzial" />
+                    <externalMetadataColumn
+                      refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NazwaWydzialu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="NazwaWydzialu" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportWydzial\SQL Server Destination"
+              componentClassID="Microsoft.SQLServerDestination"
+              contactInfo="SQL Server Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+              description="SQL Server Destination"
+              name="SQL Server Destination"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the database object to copy data into."
+                  expressionType="Notify"
+                  name="BulkInsertTableName">[dbo].[Wydzial]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
+                  name="BulkInsertCheckConstraints">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the first row to copy. Corresponds to the bulk insert FIRSTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertFirstRow">-1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any insert triggers defined on the destination object will execute during the data copy. Corresponds to the bulk insert FIRE_TRIGGERS option."
+                  name="BulkInsertFireTriggers">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Corresponds to the bulk insert KEEPIDENTITY option."
+                  name="BulkInsertKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null copied to the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="BulkInsertKeepNulls">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the last row to copy. Corresponds to the bulk insert LASTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertLastRow">-1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of syntax errors and compilation errors that can occur before the data copy operation is canceled. Each row that cannot be copied is ignored and counted as one error. Corresponds to the bulk insert MAXERRORS option."
+                  name="BulkInsertMaxErrors">-1</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies how the data to be copied is sorted. Corresponds to the bulk insert ORDER option."
+                  expressionType="Notify"
+                  name="BulkInsertOrder"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that a table-level lock is acquired for the duration of the data copy operation. Corresponds to the bulk insert TABLOCK option."
+                  name="BulkInsertTablock">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
+                  expressionType="Notify"
+                  name="Timeout">30</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
+                  name="MaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportWydzial\SQL Server Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ImportWydzial\SQL Server Destination.Inputs[SQL Server Destination Input]"
+                  hasSideEffects="true"
+                  name="SQL Server Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportWydzial\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ID_Wydzial]"
+                      cachedDataType="i2"
+                      cachedName="ID_Wydzial"
+                      externalMetadataColumnId="Package\ImportWydzial\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Wydzial]"
+                      lineageId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Wydzial]" />
+                    <inputColumn
+                      refId="Package\ImportWydzial\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[NazwaWydzialu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NazwaWydzialu"
+                      externalMetadataColumnId="Package\ImportWydzial\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[NazwaWydzialu]"
+                      lineageId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output].Columns[NazwaWydzialu]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportWydzial\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Wydzial]"
+                      dataType="i2"
+                      name="ID_Wydzial" />
+                    <externalMetadataColumn
+                      refId="Package\ImportWydzial\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[NazwaWydzialu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="NazwaWydzialu" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ImportWydzial.Paths[Derived Column Output]"
+              endId="Package\ImportWydzial\SQL Server Destination.Inputs[SQL Server Destination Input]"
+              name="Derived Column Output"
+              startId="Package\ImportWydzial\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ImportWydzial.Paths[Flat File Source Output]"
+              endId="Package\ImportWydzial\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\ImportWydzial\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -920,11 +1587,27 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{14728E8A-72D3-4E97-8DBC-F9CFE3E0171B}"
-      DTS:From="Package\Execute T-SQL Statement Task"
+      DTS:DTSID="{6CE9280A-5EC4-4B2F-8A02-55DFE0183105}"
+      DTS:From="Package\ImportTypStudiow"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\ImportStopienNaukowy" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{04452ABE-9B0C-49EE-A7DE-041FD2E5DCAC}"
+      DTS:From="Package\CleanDb"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\ImportTypStudiow" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{25944473-9018-4410-ABAC-102C57DA10FD}"
+      DTS:From="Package\ImportOsoba"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\ImportWydzial" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -937,29 +1620,41 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="118,42"
+          Id="Package\CleanDb"
+          TopLeft="85,65" />
         <NodeLayout
           Size="141,42"
           Id="Package\ImportOsoba"
-          TopLeft="145.5,308.5" />
+          TopLeft="754.5,42.5" />
         <NodeLayout
           Size="189,42"
           Id="Package\ImportStopienNaukowy"
-          TopLeft="114,168" />
+          TopLeft="521,45" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\ImportTypStudiow"
+          TopLeft="321,43.5" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\ImportWydzial"
+          TopLeft="350,201" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="212.25,210">
+          TopLeft="710,64.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,98.5"
+              EndConnector="44.5,0"
               Start="0,0"
-              End="0,91">
+              End="37,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,91" />
+                    End="37,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -968,24 +1663,88 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="225,42"
-          Id="Package\Execute T-SQL Statement Task"
-          TopLeft="96,43" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="208.5,85">
+          TopLeft="487,65.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,83"
+              EndConnector="34,0"
               Start="0,0"
-              End="0,75.5">
+              End="26.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,75.5" />
+                    End="26.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="203,86">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="118,-21.5"
+              Start="0,0"
+              End="110.5,-21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="55,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55,0"
+                    Point2="59,0"
+                    Point3="59,-4" />
+                  <mssgle:LineSegment
+                    End="59,-17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59,-17.5"
+                    Point2="59,-21.5"
+                    Point3="63,-21.5" />
+                  <mssgle:LineSegment
+                    End="110.5,-21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="825,84.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-401.5,116.5"
+              Start="0,0"
+              End="-401.5,109">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.25"
+                    Point2="0,58.25"
+                    Point3="-4,58.25" />
+                  <mssgle:LineSegment
+                    End="-397.5,58.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-397.5,58.25"
+                    Point2="-401.5,58.25"
+                    Point3="-401.5,62.25" />
+                  <mssgle:LineSegment
+                    End="-401.5,109" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1087,6 +1846,19 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ImportOsoba\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\ImportStopienNaukowy">
     <LayoutInfo>
@@ -1145,16 +1917,157 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\ImportTypStudiow">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\ImportTypStudiow\Flat File Source"
+          TopLeft="44,50" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\ImportTypStudiow\SQL Server Destination"
+          TopLeft="346,145" />
+        <EdgeLayout
+          Id="Package\ImportTypStudiow.Paths[Flat File Source Output]"
+          TopLeft="119.5,92">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="320.5,53"
+              Start="0,0"
+              End="320.5,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
+                  <mssgle:LineSegment
+                    End="316.5,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="316.5,26.5"
+                    Point2="320.5,26.5"
+                    Point3="320.5,30.5" />
+                  <mssgle:LineSegment
+                    End="320.5,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ImportOsoba\OLE DB Destination">
+    design-time-name="Package\ImportTypStudiow\SQL Server Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\ImportWydzial">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\ImportWydzial\Flat File Source"
+          TopLeft="44,50" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\ImportWydzial\Derived Column"
+          TopLeft="205,265" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\ImportWydzial\SQL Server Destination"
+          TopLeft="207,385" />
+        <EdgeLayout
+          Id="Package\ImportWydzial.Paths[Flat File Source Output]"
+          TopLeft="119.5,92">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="162.5,173"
+              Start="0,0"
+              End="162.5,165.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,82.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,82.5"
+                    Point2="0,86.5"
+                    Point3="4,86.5" />
+                  <mssgle:LineSegment
+                    End="158.5,86.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="158.5,86.5"
+                    Point2="162.5,86.5"
+                    Point3="162.5,90.5" />
+                  <mssgle:LineSegment
+                    End="162.5,165.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ImportWydzial.Paths[Derived Column Output]"
+          TopLeft="282,307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19,78"
+              Start="0,0"
+              End="19,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35"
+                    Point2="0,39"
+                    Point3="4,39" />
+                  <mssgle:LineSegment
+                    End="15,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15,39"
+                    Point2="19,39"
+                    Point3="19,43" />
+                  <mssgle:LineSegment
+                    End="19,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ImportWydzial\SQL Server Destination">
+    <Properties>
       <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
