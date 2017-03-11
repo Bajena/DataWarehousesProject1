@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{9E63C7ED-37D8-4C97-97CE-67336BCC109D}">
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{09FBEBE4-8ED3-47F9-AB1B-9E76CF51585C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -47,34 +47,34 @@
               DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="2"
               DTS:TextQualified="True"
-              DTS:ObjectName="Id"
-              DTS:DTSID="{6FF27243-FA0F-4C53-AE7B-796533A41251}"
+              DTS:ObjectName="ID_Osoba"
+              DTS:DTSID="{61FF895A-AC93-4A19-9686-790BB6CA42BB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="250"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Imie"
-              DTS:DTSID="{DAA2CCB8-E62E-4A99-8532-2E997468243C}"
+              DTS:DTSID="{4EF1BB54-9C1F-4F5D-9BFF-C2149FFAD418}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="250"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nazwisko"
-              DTS:DTSID="{B467C15B-2664-4DEC-8F4F-2D1E3FE57200}"
+              DTS:DTSID="{949E3951-4212-4F86-8190-B4BE48C7B381}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
               DTS:DataType="16"
               DTS:TextQualified="True"
-              DTS:ObjectName="Stopien"
-              DTS:DTSID="{EF534D79-C853-4245-969E-C459CB9B30EE}"
+              DTS:ObjectName="ID_Stopien"
+              DTS:DTSID="{B8EDCCF4-9144-44F5-8DBA-57E6FED7632A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -135,6 +135,83 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PracaDyplomowaConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{776173EB-5FD5-44BD-B257-7B41A22176AE}"
+      DTS:ObjectName="PracaDyplomowaConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x003B_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\PracaDyplomowa.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Praca"
+              DTS:DTSID="{77992289-8D1F-4181-BECC-EB31D8655992}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Temat"
+              DTS:DTSID="{B8130E23-8842-49A8-8080-1F6FE33B23CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data"
+              DTS:DTSID="{7FB3BED9-ADA5-4CE9-9FEB-36AE6D5CBAEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ocena"
+              DTS:DTSID="{41437A1A-56F4-41C5-9351-66DBB889B9B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_TypStudiow"
+              DTS:DTSID="{729C7BB1-D489-4A4D-9EF5-A07A7FF5492B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Promotor"
+              DTS:DTSID="{463A5ACD-758D-477F-BF34-B3ABC5D28220}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Wydzial"
+              DTS:DTSID="{B3186F6B-F78B-4C8A-8138-5A78A748E9D6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[PraceDyplomoweConnection]"
       DTS:CreationName="ADO.NET:SQL"
       DTS:DTSID="{8E18D596-01C6-4739-8912-5902478A0EB3}"
@@ -142,6 +219,41 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN\SQLEXPRESS;Integrated Security=SSPI;Connect Timeout=30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RecenzjaConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{65BFA672-EEA4-4965-B110-BE79C60AA034}"
+      DTS:ObjectName="RecenzjaConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Recenzja.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Osoba"
+              DTS:DTSID="{625B57DB-38DE-40AF-BD5E-ABFFA4130E75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Praca"
+              DTS:DTSID="{EF5C9072-E406-4045-9354-FCF66BF05E90}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -269,7 +381,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{8E18D596-01C6-4739-8912-5902478A0EB3}"
-          SQLTask:SqlStatementSource="USE [PraceDyplomowe]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[Osoba]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[StopienNaukowy]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[TypStudiow]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[Wydzial]&#xA;GO"
+          SQLTask:SqlStatementSource="USE [PraceDyplomowe]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[Recenzja]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[PracaDyplomowa]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[Osoba]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[StopienNaukowy]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[TypStudiow]&#xA;GO&#xA;&#xA;DELETE FROM [dbo].[Wydzial]&#xA;GO"
           SQLTask:ServerVersion="9"
           SQLTask:ExtendedLogging="True"
           SQLTask:LocalConnectionForLogging=""
@@ -290,102 +402,6 @@
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\ImportOsoba\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\ImportOsoba\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\ImportOsoba\Conditional Split.Inputs[Conditional Split Input].Columns[Nazwisko]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="250"
-                      cachedName="Nazwisko"
-                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Nazwisko]" />
-                    <inputColumn
-                      refId="Package\ImportOsoba\Conditional Split.Inputs[Conditional Split Input].Columns[Stopien]"
-                      cachedDataType="i1"
-                      cachedName="Stopien"
-                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Stopien]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\ImportOsoba\Conditional Split.Outputs[ValidRows]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="ValidRows"
-                  synchronousInputId="Package\ImportOsoba\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[SUBSTRING](#{Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Nazwisko]},1,1) != " " &amp;&amp; #{Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Stopien]} &gt;= 1</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">SUBSTRING(Nazwisko,1,1) != " " &amp;&amp; Stopien &gt;= 1</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\ImportOsoba\Conditional Split.Outputs[DiscardedRows]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="DiscardedRows"
-                  synchronousInputId="Package\ImportOsoba\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\ImportOsoba\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\ImportOsoba\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ImportOsoba\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\ImportOsoba\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\ImportOsoba\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\ImportOsoba\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\ImportOsoba\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
@@ -418,33 +434,13 @@
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Id]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Id]"
-                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Id]"
-                      name="Id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Imie]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Imie]"
-                      length="250"
+                      length="50"
                       lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Imie]"
                       name="Imie"
                       truncationRowDisposition="FailComponent">
@@ -466,7 +462,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Nazwisko]"
-                      length="250"
+                      length="50"
                       lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Nazwisko]"
                       name="Nazwisko"
                       truncationRowDisposition="FailComponent">
@@ -482,13 +478,33 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Stopien]"
+                      refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Osoba]"
+                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]"
+                      name="ID_Osoba"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Stopien]"
                       dataType="i1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Stopien]"
-                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Stopien]"
-                      name="Stopien"
+                      externalMetadataColumnId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Stopien]"
+                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Stopien]"
+                      name="ID_Stopien"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -505,25 +521,25 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Id]"
-                      dataType="i2"
-                      name="Id" />
-                    <externalMetadataColumn
                       refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Imie]"
                       codePage="1250"
                       dataType="str"
-                      length="250"
+                      length="50"
                       name="Imie" />
                     <externalMetadataColumn
                       refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Nazwisko]"
                       codePage="1250"
                       dataType="str"
-                      length="250"
+                      length="50"
                       name="Nazwisko" />
                     <externalMetadataColumn
-                      refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Stopien]"
+                      refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Osoba]"
+                      dataType="i2"
+                      name="ID_Osoba" />
+                    <externalMetadataColumn
+                      refId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Stopien]"
                       dataType="i1"
-                      name="Stopien" />
+                      name="ID_Stopien" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -631,7 +647,7 @@
                       refId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Imie]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="250"
+                      cachedLength="50"
                       cachedName="Imie"
                       externalMetadataColumnId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Imie]"
                       lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Imie]" />
@@ -639,22 +655,22 @@
                       refId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nazwisko]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="250"
+                      cachedLength="50"
                       cachedName="Nazwisko"
                       externalMetadataColumnId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nazwisko]"
                       lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Nazwisko]" />
                     <inputColumn
-                      refId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id]"
+                      refId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Osoba]"
                       cachedDataType="i2"
-                      cachedName="Id"
+                      cachedName="ID_Osoba"
                       externalMetadataColumnId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Osoba]"
-                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Id]" />
+                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]" />
                     <inputColumn
-                      refId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Stopien]"
+                      refId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Stopien]"
                       cachedDataType="i1"
-                      cachedName="Stopien"
+                      cachedName="ID_Stopien"
                       externalMetadataColumnId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Stopien]"
-                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Stopien]" />
+                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Stopien]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -706,18 +722,2125 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\ImportOsoba\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;10"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="10">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"OsobaInput", StringComparison.Ordinal))
+        {
+            OsobaInput_ProcessInput(new OsobaInputBuffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void OsobaInput_ProcessInput(OsobaInputBuffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            OsobaInput_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void OsobaInput_ProcessInputRow(OsobaInputBuffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+using System.Diagnostics;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from OsobaInput.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void OsobaInput_ProcessInputRow(OsobaInputBuffer Row)
+    {
+        if (Row.IDStopien == 0)
+        {
+            int stopien;
+            if (int.TryParse(Row.Nazwisko, out stopien))
+            {
+                Row.IDStopien = (sbyte)stopien;
+                Row.Nazwisko = Row.Imie;
+                Row.Imie = "";
+            }
+            else
+            {
+                Row.IDStopien = 1;
+            }
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class OsobaInputBuffer: ScriptBuffer
+
+{
+    public OsobaInputBuffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String Imie
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool Imie_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String Nazwisko
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[1]);
+        }
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool Nazwisko_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int16 IDOsoba
+    {
+        get
+        {
+            return Buffer.GetInt16(BufferColumnIndexes[2]);
+        }
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool IDOsoba_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public SByte IDStopien
+    {
+        get
+        {
+            return Buffer.GetSByte(BufferColumnIndexes[3]);
+        }
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool IDStopien_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String ImieOut
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool ImieOut_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public SByte IDStopienOut
+    {
+        set
+        {
+            this[5] = value;
+        }
+    }
+    public bool IDStopienOut_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(5);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int16 IDOsobaOut
+    {
+        set
+        {
+            this[6] = value;
+        }
+    }
+    public bool IDOsobaOut_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(6);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String NazwiskoOut
+    {
+        set
+        {
+            this[7] = value;
+        }
+    }
+    public bool NazwiskoOut_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(7);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9f8379ec9a4d4524ac66dc77e4e1b86f.Properties.Settings.get_Default():SC_9f8379ec9a4d4524ac66dc77e4e1b86f.Properties.Sett" +
+    "ings")]
+
+namespace SC_9f8379ec9a4d4524ac66dc77e4e1b86f.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>SC_9f8379ec9a4d4524ac66dc77e4e1b86f</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>SC_9f8379ec9a4d4524ac66dc77e4e1b86f</msb:DisplayName>
+		<msb:ProjectId>{C4E2CF28-07A9-4EDB-B5F9-C75D1998D959}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_9f8379ec9a4d4524ac66dc77e4e1b86f.csproj"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+		<msb:Breakpoint Include="b5bdc2c49a1a4041826cb12dd7a8bb32">
+			<msb:FileName>main.cs</msb:FileName>
+			<msb:ColumnNumber>13</msb:ColumnNumber>
+			<msb:Enabled>True</msb:Enabled>
+			<msb:LineNumber>121</msb:LineNumber>
+			<msb:Condition></msb:Condition>
+			<msb:ConditionType>1</msb:ConditionType>
+			<msb:Language>C#</msb:Language>
+			<msb:HitCountType>1</msb:HitCountType>
+			<msb:HitCountTarget>1</msb:HitCountTarget>
+		</msb:Breakpoint>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_9f8379ec9a4d4524ac66dc77e4e1b86f")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_9f8379ec9a4d4524ac66dc77e4e1b86f")]
+[assembly: AssemblyCopyright("Copyright @  2017")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_9f8379ec9a4d4524ac66dc77e4e1b86f.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95ceec9d-0c2b-4f48-8ff8-55927d0b7a5e}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_9f8379ec9a4d4524ac66dc77e4e1b86f</RootNamespace>
+    <AssemblyName>SC_9f8379ec9a4d4524ac66dc77e4e1b86f</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_9f8379ec9a4d4524ac66dc77e4e1b86f" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9f8379ec9a4d4524ac66dc77e4e1b86f.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9f8379ec9a4d4524ac66dc77e4e1b86f.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_9f8379ec9a4d4524ac66dc77e4e1b86f.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_9f8379ec9a4d4524ac66dc77e4e1b86f.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_9f8379ec9a4d4524ac66dc77e4e1b86f.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_9f8379ec9a4d4524ac66dc77e4e1b86f.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDANUFxFgAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAAJjcA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANQ2AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAALBcAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAI
+NwAAAAAAAEgAAAACAAUAOCMAAOQSAAABAAAAAAAAABw2AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAIAPwAAAAEAABEDbxIAAAYt
+NgNvCgAABhIAKBIAAAosIAMGZ28TAAAGAwNvBgAABm8LAAAGA3IBAABwbwcAAAYqAxdvEwAABioe
+AiggAAAGKioCAwQFKBMAAAoqUgJ7FAAACgJ7FQAAChaUbxYAAAoqJgIWAygXAAAKKiICFigYAAAK
+KloDLAgCFigZAAAKKnIDAABwcxoAAAp6UgJ7FAAACgJ7FQAACheUbxYAAAoqJgIXAygXAAAKKiIC
+FygYAAAKKloDLAgCFygZAAAKKnIDAABwcxoAAAp6UgJ7FAAACgJ7FQAAChiUbxsAAAoqOgIYA4wc
+AAABKBcAAAoqIgIYKBgAAAoqWgMsCAIYKBkAAAoqcgMAAHBzGgAACnpSAnsUAAAKAnsVAAAKGZRv
+HAAACio6AhkDjB0AAAEoFwAACioiAhkoGAAACipaAywIAhkoGQAACipyAwAAcHMaAAAKeiYCGgMo
+FwAACipaAywIAhooGQAACipyAwAAcHMaAAAKejoCGwOMHQAAASgXAAAKKloDLAgCGygZAAAKKnID
+AABwcxoAAAp6OgIcA4wcAAABKBcAAAoqWgMsCAIcKBkAAAoqcgMAAHBzGgAACnomAh0DKBcAAAoq
+WgMsCAIdKBkAAAoqcgMAAHBzGgAACnoeAigdAAAKKh4CKB4AAAoqfgIoHwAACgICcyQAAAZ9AQAA
+BAICcyUAAAZ9AgAABCqSBHKgAABwGm8gAAAKLBUCBQIDKCEAAAoOBHMFAAAGbyIAAAYqSisHAgNv
+IwAABgNvHgAABi3xKgYqOgIoIgAACgIDfQMAAAQqOgIoIgAACgIDfQQAAAQqHgIoIgAACiqufgUA
+AAQtHnK2AABw0AcAAAIoIwAACm8kAAAKcyUAAAqABQAABH4FAAAEKhp+BgAABCoeAoAGAAAEKhp+
+BwAABCoeAigmAAAKKi5zKwAABoAHAAAEKkJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUA
+bAAAALwHAAAjfgAAKAgAALAHAAAjU3RyaW5ncwAAAADYDwAAKAEAACNVUwAAEQAAEAAAACNHVUlE
+AAAAEBEAANQBAAAjQmxvYgAAAAAAAAACAAABVxWiAQkBAAAA+gEzABYAAAEAAAAiAAAACAAAAAcA
+AAAsAAAAHQAAACYAAAAQAAAAAQAAAAMAAAATAAAAHAAAAAEAAAAEAAAAAQAAAAAAOAMBAAAAAAAG
+AAICoQUGAJYCoQUGAE4BjgUPABUGAAAGAHsBxQQGAOUBxQQGAMYBxQQGAH0CxQQGACICxQQGADsC
+xQQGAJIBxQQGAK0B/gIKAFYCkgAKAE8FkgAOAEAFkgAKACgFkgAKANsGkgAGAJ4GYQQGADEBjgUG
+AHEFwQUGAAIFsAQSAAEBIgMSAGIBIgMSAOAAmwQGABYBoQUGAAEAYQQGANcEYQQGAAoAYQQGAM4C
+YQQGABsDYQQGAPEEYQQGALMAYQQGAGQAYQQGAKQHxQQAAAAAEAAAAAAAAQABAAEAEACQBAAAEAAB
+AAEAAQAQAFwFAAA5AAEABQABABAAvQYAAEUAAQAgAAEAEACSBgAASQADACQAAQAQAFMGAABJAAQA
+JQAAABAAyAUkBkkABQAmAAABEACCBiQGYQAHACoABgCSBowABgBTBpAAAQDLBpQAAQDLBpQAEQBo
+BJgAEQDQAJwAEQBCAKAAUCAAAAAAxgC0AgYAAQBYIAAAAADGAL8CBgABAGAgAAAAAMYAfQekAAEA
+qyAAAAAAhhiBBQYAAgCzIAAAAACGGIEFJgACAL4gAAAAAIYIUgCqAAUA0yAAAAAAhghbABAABQDd
+IAAAAACGCIYDUgAGAOYgAAAAAIYIlgOuAAYA/SAAAAAAhggOBaoABwASIQAAAACGCBsFEAAHABwh
+AAAAAIYI0ANSAAgAJSEAAAAAhgjkA64ACAA8IQAAAACGCCEAswAJAFEhAAAAAIYILQC3AAkAYCEA
+AAAAhghgA1IACgBpIQAAAACGCHMDrgAKAIAhAAAAAIYIdAS8AAsAlSEAAAAAhgiCBMAACwCkIQAA
+AACGCKYDUgAMAK0hAAAAAIYIuwOuAAwAxCEAAAAAhgg4BxAADQDOIQAAAACGCA4ErgAOAOUhAAAA
+AIYIRAfAAA8A9CEAAAAAhgghBK4AEAALIgAAAACGCCkHtwARABoiAAAAAIYI+AOuABIAMSIAAAAA
+hghVBxAAEwA7IgAAAACGCDkErgAUAFIiAAAAAIYAmAdSABUAWiIAAAAAhgClBlIAFQBiIgAAAACG
+GIEFBgAVAIIiAAAAAMYAcAfFABUApyIAAAAAxgFlB6QAGQC6IgAAAADGAX0HpAAaALwiAAAAAIYY
+gQXPABsAyyIAAAAAhhiBBc8AHADaIgAAAACDGIEFBgAdAOIiAAAAAJMIbQXVAB0ADiMAAAAAkwi4
+ANoAHQAVIwAAAACTCMQA3wAdAB0jAAAAAJYIsQblAB4AJCMAAAAAhhiBBQYAHgAsIwAAAACRGIcF
+6gAeAAAAAQCcBwAAAQBmBQAAAgBdBgAAAwA2BQAAAQDUAgAAAQDUAgAAAQDUAgAAAQDUAgAAAQDU
+AgAAAQDUAgAAAQDUAgAAAQDUAgAAAQDUAgAAAQDUAgAAAQDUAgAAAQDUAgAAAQDUAgAAAQDUAgAA
+AQDUAgAAAQDUAgAAAQAZAAAAAgCIAAAAAwBmBQAABAA2BQAAAQBmBQAAAQCcBwAAAQDhBgAAAQDh
+BgAAAQDUAgkAgQUBABEAgQUGABkAgQUKACkAgQUQADEAgQUQADkAgQUQAEEAgQUQAEkAgQUQAFEA
+gQUQAFkAgQUQAGEAgQUQAGkAgQUGAJkAgQUGALkAgQUVAMkAgQUGAIkAtAIGAIkAvwIGANEA+AAf
+AHEAgQUmAHEAZgUwAHEAXQY0AHkAGAM4AHEAWAQ9AHEASQRDAHEAUAQBANkAgQUQAHkABwBIAHkA
+ywJNAHEAmAdSAHEApQZSAIkAgQUGAPEAiwZWAIkAcQZdAJEAgQUGAAEBdgBjAAEBoAdsAKEAgQVy
+AMEAgQUGAC4ACwANAS4AEwAWAS4AGwA1AS4AIwA+AS4AKwBnAS4AMwBnAS4AOwBnAS4AQwA+AS4A
+SwBtAS4AUwBnAS4AWwCEAUMAYwDOAeEAewDOAeMAawDOASkCcwA1AUkCcwA1ARsAAwABAAcAEQAI
+ABMAAABfAO4AAACaA/IAAAAfBe4AAADoA/IAAAAxAPYAAAB3A/IAAACGBPoAAAC/A/IAAAA8B+4A
+AAASBPIAAABIB/oAAAAlBPIAAAAtB/YAAAD8A/IAAABZB+4AAAA9BPIAAABxBf4AAADYAAMBAAC1
+BggBAgAGAAMAAQAHAAMAAgAIAAUAAQAJAAUAAgAKAAcAAQALAAcAAgAMAAkAAQANAAkAAgAOAAsA
+AQAPAAsAAgAQAA0AAQARAA0AAgASAA8AAQATAA8AAgAUABEAAQAVABEAAQAWABMAAQAXABUAAQAY
+ABcAAQAZABkAAQAaABsAAQAbAB0AAQAcAB8AAQAdACEAAgAnACMAAgAoACUAAQApACUAAgAqACcA
+BIAAAAEAAAAAAAAAAAAAAAAA2gIAAAQAAAAAAAAAAAAAAHoAOQAAAAAADQAAAAAAAAAAAAAAgwDr
+BgAAAAANAAAAAAAAAAAAAACDAAgHAAAAAAQAAAAAAAAAAAAAAHoAYQQAAAAAAAAAAAEAAADSBQAA
+AAAAAABJbnQzMgBHZXRJbnQxNgA8TW9kdWxlPgBJbnB1dElEAGdldF9JRE9zb2JhAHNldF9JRE9z
+b2JhAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBnZXRfSW1pZQBzZXRfSW1pZQBSdW50aW1lVHlw
+ZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5E
+dHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUA
+QXBwbGljYXRpb25TZXR0aW5nc0Jhc2UAVHJ5UGFyc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29t
+cGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1
+Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0
+cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0
+ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJp
+YnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJp
+YnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQ
+b2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxp
+dHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQBHZXRTQnl0ZQB2YWx1ZQBTQ185Zjgz
+NzllYzlhNGQ0NTI0YWM2NmRjNzdlNGUxYjg2ZgBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAEdl
+dFN0cmluZwBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfOWY4Mzc5ZWM5YTRkNDUyNGFjNjZkYzc3
+ZTRlMWI4NmYuZGxsAGdldF9JRE9zb2JhX0lzTnVsbABzZXRfSURPc29iYV9Jc051bGwAZ2V0X0lt
+aWVfSXNOdWxsAHNldF9JbWllX0lzTnVsbABnZXRfSURTdG9waWVuX0lzTnVsbABzZXRfSURTdG9w
+aWVuX0lzTnVsbABnZXRfTmF6d2lza29fSXNOdWxsAHNldF9OYXp3aXNrb19Jc051bGwAc2V0X0lE
+T3NvYmFPdXRfSXNOdWxsAHNldF9JbWllT3V0X0lzTnVsbABzZXRfSURTdG9waWVuT3V0X0lzTnVs
+bABzZXRfTmF6d2lza29PdXRfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAHJlc291cmNl
+TWFuAGdldF9JRFN0b3BpZW4Ac2V0X0lEU3RvcGllbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1
+cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEludmFsaWRPcGVy
+YXRpb25FeGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBnZXRfTmF6d2lza28A
+c2V0X05hendpc2tvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAFBpcGVsaW5lQnVmZmVyAFNjcmlw
+dEJ1ZmZlcgBPc29iYUlucHV0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9y
+AFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3Rl
+bS5SZXNvdXJjZXMAU0NfOWY4Mzc5ZWM5YTRkNDUyNGFjNjZkYzc3ZTRlMWI4NmYuUHJvcGVydGll
+cy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzlmODM3OWVjOWE0ZDQ1MjRh
+YzY2ZGM3N2U0ZTFiODZmLlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMA
+R2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAT2JqZWN0AEVuZE9m
+Um93c2V0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENv
+bXBvbmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIu
+UGlwZWxpbmVIb3N0AHNldF9JRE9zb2JhT3V0AHNldF9JbWllT3V0AHNldF9JRFN0b3BpZW5PdXQA
+c2V0X05hendpc2tvT3V0AE9zb2JhSW5wdXRfUHJvY2Vzc0lucHV0AE9zb2JhSW5wdXRfUHJvY2Vz
+c0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAAABAICbSQBzAE4AdQBsAGwAIABwAHIA
+bwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBl
+AC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUA
+bQBuACAAaQBuAHMAdABlAGEAZAAuAAAVTwBzAG8AYgBhAEkAbgBwAHUAdAAAcVMAQwBfADkAZgA4
+ADMANwA5AGUAYwA5AGEANABkADQANQAyADQAYQBjADYANgBkAGMANwA3AGUANABlADEAYgA4ADYA
+ZgAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAfzZqckuQI02+o0bB
+/OI60wAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQMHAQgGAAICDhAICSADARI9HQgSQQMGEj0D
+Bh0IBCABDggFIAIBCBwEIAECCAQgAQYIBCABBAgDIAACBiACAg4RfQUgAR0ICAgAARKAgRGAhQUg
+ABKAiQcgAgEOEoCJCLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJFAwYSUQMGElUDBhIgBSAB
+ARIMAyAADgQgAQECAyAABgQgAQEGAyAABAQgAQEECSAEAQgOEj0SQQUgAQESRQQAABJRBAAAElUF
+AAEBElUEAAASIAMAAAEDKAAOAygAAgMoAAYDKAAEBAgAElEECAASVQQIABIgCAEACAAAAAAAHgEA
+AQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ185ZjgzNzllYzlhNGQ0
+NTI0YWM2NmRjNzdlNGUxYjg2ZgAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDE3AABJAQAaLk5F
+VEZyYW1ld29yayxWZXJzaW9uPXY0LjUBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJh
+bWV3b3JrIDQuNQQBAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJj
+ZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJs
+aWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291
+cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAAD8NgAAAAAAAAAAAAAWNwAAACAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAACDcAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUA
+IAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAA
+MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5
+AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAA
+UwBDAF8AOQBmADgAMwA3ADkAZQBjADkAYQA0AGQANAA1ADIANABhAGMANgA2AGQAYwA3ADcAZQA0
+AGUAMQBiADgANgBmAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
+LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwA5AGYAOAAzADcAOQBl
+AGMAOQBhADQAZAA0ADUAMgA0AGEAYwA2ADYAZABjADcANwBlADQAZQAxAGIAOAA2AGYALgBkAGwA
+bAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0
+ACAAQAAgACAAMgAwADEANwAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAA
+AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADkAZgA4
+ADMANwA5AGUAYwA5AGEANABkADQANQAyADQAYQBjADYANgBkAGMANwA3AGUANABlADEAYgA4ADYA
+ZgAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA5AGYAOAAz
+ADcAOQBlAGMAOQBhADQAZAA0ADUAMgA0AGEAYwA2ADYAZABjADcANwBlADQAZQAxAGIAOAA2AGYA
+AAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAI
+AAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAACg3AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_9f8379ec9a4d4524ac66dc77e4e1b86f</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="1">
+                    <arrayElement
+                      dataType="System.String">&lt;SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+&lt;SOAP-ENV:Body&gt;
+&lt;a1:ScriptBreakpointInfo id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Microsoft.SqlServer.VSTAHosting/Microsoft.SqlServer.VSTAScriptingLib%2C%20Version%3D13.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3D89845dcd8080cc91"&gt;
+&lt;Enabled&gt;true&lt;/Enabled&gt;
+&lt;File id="ref-3"&gt;main.cs&lt;/File&gt;
+&lt;FileLine&gt;121&lt;/FileLine&gt;
+&lt;FileColumn&gt;13&lt;/FileColumn&gt;
+&lt;/a1:ScriptBreakpointInfo&gt;
+&lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">610e7c5a44feae888d13e79652c5a171</property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataShaChecksum"
+                  typeConverter="NOTBROWSABLE">558667ed5ccd1e1707bb3fcfdbbc4307ac4c2165</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\ImportOsoba\Script Component.Inputs[OsobaInput]"
+                  hasSideEffects="true"
+                  name="OsobaInput">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportOsoba\Script Component.Inputs[OsobaInput].Columns[Imie]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Imie"
+                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Imie]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\ImportOsoba\Script Component.Inputs[OsobaInput].Columns[Nazwisko]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nazwisko"
+                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[Nazwisko]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\ImportOsoba\Script Component.Inputs[OsobaInput].Columns[ID_Osoba]"
+                      cachedDataType="i2"
+                      cachedName="ID_Osoba"
+                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\ImportOsoba\Script Component.Inputs[OsobaInput].Columns[ID_Stopien]"
+                      cachedDataType="i1"
+                      cachedName="ID_Stopien"
+                      lineageId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Stopien]"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput]"
+                  name="OsobaOutput"
+                  synchronousInputId="Package\ImportOsoba\Script Component.Inputs[OsobaInput]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput].Columns[ImieOut]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput].Columns[ImieOut]"
+                      name="ImieOut" />
+                    <outputColumn
+                      refId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput].Columns[ID_StopienOut]"
+                      dataType="i1"
+                      lineageId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput].Columns[ID_StopienOut]"
+                      name="ID_StopienOut" />
+                    <outputColumn
+                      refId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput].Columns[ID_OsobaOut]"
+                      dataType="i2"
+                      lineageId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput].Columns[ID_OsobaOut]"
+                      name="ID_OsobaOut" />
+                    <outputColumn
+                      refId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput].Columns[NazwiskoOut]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput].Columns[NazwiskoOut]"
+                      name="NazwiskoOut" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\ImportOsoba.Paths[Flat File Source Output]"
-              endId="Package\ImportOsoba\Conditional Split.Inputs[Conditional Split Input]"
+              endId="Package\ImportOsoba\Script Component.Inputs[OsobaInput]"
               name="Flat File Source Output"
               startId="Package\ImportOsoba\Flat File Source.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\ImportOsoba.Paths[ValidRows]"
+              refId="Package\ImportOsoba.Paths[OsobaOutput]"
               endId="Package\ImportOsoba\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="ValidRows"
-              startId="Package\ImportOsoba\Conditional Split.Outputs[ValidRows]" />
+              name="OsobaOutput"
+              startId="Package\ImportOsoba\Script Component.Outputs[OsobaOutput]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ImportPraca"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{486dfa11-b2a7-4702-85ac-be53899a113e}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ImportPraca"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ImportPraca\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ImportPraca\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportPraca\Data Conversion.Inputs[Data Conversion Input].Columns[Data]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Data"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Data]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\ImportPraca\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Output].Columns[Data]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Output].Columns[Data]"
+                      name="Data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Data]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\ImportPraca\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportPraca\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ImportPraca\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportPraca\Derived Column.Inputs[Derived Column Input].Columns[Data]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Data"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Data]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Data]},"«","ź")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(Data,"«","ź")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ImportPraca\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ImportPraca\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ImportPraca\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ImportPraca\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportPraca\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportPraca\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportPraca\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportPraca\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportPraca\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportPraca\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PracaDyplomowaConnectionManager]"
+                  connectionManagerRefId="Package.ConnectionManagers[PracaDyplomowaConnectionManager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Wydzial]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Wydzial]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Wydzial]"
+                      name="ID_Wydzial"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Praca]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Praca]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Praca]"
+                      name="ID_Praca"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Temat]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Temat]"
+                      length="500"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Temat]"
+                      name="Temat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Data]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Data]"
+                      length="50"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Data]"
+                      name="Data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Ocena]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ocena]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Ocena]"
+                      name="Ocena"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_TypStudiow]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_TypStudiow]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_TypStudiow]"
+                      name="ID_TypStudiow"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Promotor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Promotor]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Promotor]"
+                      name="ID_Promotor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Wydzial]"
+                      dataType="i2"
+                      name="ID_Wydzial" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Praca]"
+                      dataType="i4"
+                      name="ID_Praca" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Temat]"
+                      codePage="1250"
+                      dataType="str"
+                      length="500"
+                      name="Temat" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Data]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Data" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ocena]"
+                      dataType="i2"
+                      name="Ocena" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_TypStudiow]"
+                      dataType="i2"
+                      name="ID_TypStudiow" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Promotor]"
+                      dataType="i4"
+                      name="ID_Promotor" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportPraca\SQL Server Destination"
+              componentClassID="Microsoft.SQLServerDestination"
+              contactInfo="SQL Server Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+              description="SQL Server Destination"
+              name="SQL Server Destination"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the database object to copy data into."
+                  expressionType="Notify"
+                  name="BulkInsertTableName">[dbo].[PracaDyplomowa]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
+                  name="BulkInsertCheckConstraints">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the first row to copy. Corresponds to the bulk insert FIRSTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertFirstRow">-1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any insert triggers defined on the destination object will execute during the data copy. Corresponds to the bulk insert FIRE_TRIGGERS option."
+                  name="BulkInsertFireTriggers">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Corresponds to the bulk insert KEEPIDENTITY option."
+                  name="BulkInsertKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null copied to the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="BulkInsertKeepNulls">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the last row to copy. Corresponds to the bulk insert LASTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertLastRow">-1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of syntax errors and compilation errors that can occur before the data copy operation is canceled. Each row that cannot be copied is ignored and counted as one error. Corresponds to the bulk insert MAXERRORS option."
+                  name="BulkInsertMaxErrors">-1</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies how the data to be copied is sorted. Corresponds to the bulk insert ORDER option."
+                  expressionType="Notify"
+                  name="BulkInsertOrder"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that a table-level lock is acquired for the duration of the data copy operation. Corresponds to the bulk insert TABLOCK option."
+                  name="BulkInsertTablock">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
+                  expressionType="Notify"
+                  name="Timeout">30</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
+                  name="MaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportPraca\SQL Server Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input]"
+                  hasSideEffects="true"
+                  name="SQL Server Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ID_Wydzial]"
+                      cachedDataType="i2"
+                      cachedName="ID_Wydzial"
+                      externalMetadataColumnId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Wydzial]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Wydzial]" />
+                    <inputColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ID_Praca]"
+                      cachedDataType="i4"
+                      cachedName="ID_Praca"
+                      externalMetadataColumnId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Praca]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Praca]" />
+                    <inputColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Temat]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="Temat"
+                      externalMetadataColumnId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Temat]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Temat]" />
+                    <inputColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Ocena]"
+                      cachedDataType="i2"
+                      cachedName="Ocena"
+                      externalMetadataColumnId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Ocena]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[Ocena]" />
+                    <inputColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ID_TypStudiow]"
+                      cachedDataType="i2"
+                      cachedName="ID_TypStudiow"
+                      externalMetadataColumnId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_TypStudiow]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_TypStudiow]" />
+                    <inputColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ID_Promotor]"
+                      cachedDataType="i4"
+                      cachedName="ID_Promotor"
+                      externalMetadataColumnId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Promotor]"
+                      lineageId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Promotor]" />
+                    <inputColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Data]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Data"
+                      externalMetadataColumnId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Data]"
+                      lineageId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Output].Columns[Data]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Wydzial]"
+                      dataType="i2"
+                      name="ID_Wydzial" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Praca]"
+                      dataType="i4"
+                      name="ID_Praca" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Temat]"
+                      codePage="1250"
+                      dataType="str"
+                      length="500"
+                      name="Temat" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Data]"
+                      dataType="dbTimeStamp"
+                      name="Data" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Ocena]"
+                      dataType="i2"
+                      name="Ocena" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_TypStudiow]"
+                      dataType="i2"
+                      name="ID_TypStudiow" />
+                    <externalMetadataColumn
+                      refId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Promotor]"
+                      dataType="i4"
+                      name="ID_Promotor" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ImportPraca.Paths[Data Conversion Output]"
+              endId="Package\ImportPraca\SQL Server Destination.Inputs[SQL Server Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\ImportPraca\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\ImportPraca.Paths[Derived Column Output]"
+              endId="Package\ImportPraca\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\ImportPraca\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ImportPraca.Paths[Flat File Source Output]"
+              endId="Package\ImportPraca\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\ImportPraca\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ImportRecenzja"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4332d630-ff33-4a26-9771-2e4ae89467e1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ImportRecenzja"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ImportRecenzja\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ImportRecenzja\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportRecenzja\Conditional Split.Inputs[Conditional Split Input].Columns[ID_Osoba]"
+                      cachedDataType="i4"
+                      cachedName="ID_Osoba"
+                      lineageId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ImportRecenzja\Conditional Split.Outputs[InvalidRow]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="InvalidRow"
+                  synchronousInputId="Package\ImportRecenzja\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(ID_Osoba)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ImportRecenzja\Conditional Split.Outputs[ValidRow]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="ValidRow"
+                  synchronousInputId="Package\ImportRecenzja\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ImportRecenzja\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\ImportRecenzja\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportRecenzja\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportRecenzja\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportRecenzja\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportRecenzja\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportRecenzja\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportRecenzja\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RecenzjaConnectionManager]"
+                  connectionManagerRefId="Package.ConnectionManagers[RecenzjaConnectionManager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Osoba]"
+                      lineageId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]"
+                      name="ID_Osoba"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Praca]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Praca]"
+                      lineageId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Praca]"
+                      name="ID_Praca"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Osoba]"
+                      dataType="i4"
+                      name="ID_Osoba" />
+                    <externalMetadataColumn
+                      refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID_Praca]"
+                      dataType="i4"
+                      name="ID_Praca" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ImportRecenzja\SQL Server Destination"
+              componentClassID="Microsoft.SQLServerDestination"
+              contactInfo="SQL Server Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+              description="SQL Server Destination"
+              name="SQL Server Destination"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the database object to copy data into."
+                  expressionType="Notify"
+                  name="BulkInsertTableName">[dbo].[Recenzja]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
+                  name="BulkInsertCheckConstraints">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the first row to copy. Corresponds to the bulk insert FIRSTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertFirstRow">-1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any insert triggers defined on the destination object will execute during the data copy. Corresponds to the bulk insert FIRE_TRIGGERS option."
+                  name="BulkInsertFireTriggers">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Corresponds to the bulk insert KEEPIDENTITY option."
+                  name="BulkInsertKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null copied to the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="BulkInsertKeepNulls">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the last row to copy. Corresponds to the bulk insert LASTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertLastRow">-1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of syntax errors and compilation errors that can occur before the data copy operation is canceled. Each row that cannot be copied is ignored and counted as one error. Corresponds to the bulk insert MAXERRORS option."
+                  name="BulkInsertMaxErrors">-1</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies how the data to be copied is sorted. Corresponds to the bulk insert ORDER option."
+                  expressionType="Notify"
+                  name="BulkInsertOrder"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that a table-level lock is acquired for the duration of the data copy operation. Corresponds to the bulk insert TABLOCK option."
+                  name="BulkInsertTablock">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
+                  expressionType="Notify"
+                  name="Timeout">30</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
+                  name="MaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ImportRecenzja\SQL Server Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ImportRecenzja\SQL Server Destination.Inputs[SQL Server Destination Input]"
+                  hasSideEffects="true"
+                  name="SQL Server Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ImportRecenzja\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ID_Osoba]"
+                      cachedDataType="i4"
+                      cachedName="ID_Osoba"
+                      externalMetadataColumnId="Package\ImportRecenzja\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Osoba]"
+                      lineageId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Osoba]" />
+                    <inputColumn
+                      refId="Package\ImportRecenzja\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ID_Praca]"
+                      cachedDataType="i4"
+                      cachedName="ID_Praca"
+                      externalMetadataColumnId="Package\ImportRecenzja\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Praca]"
+                      lineageId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output].Columns[ID_Praca]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ImportRecenzja\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Osoba]"
+                      dataType="i4"
+                      name="ID_Osoba" />
+                    <externalMetadataColumn
+                      refId="Package\ImportRecenzja\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ID_Praca]"
+                      dataType="i4"
+                      name="ID_Praca" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ImportRecenzja.Paths[Flat File Source Output]"
+              endId="Package\ImportRecenzja\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\ImportRecenzja\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\ImportRecenzja.Paths[ValidRow]"
+              endId="Package\ImportRecenzja\SQL Server Destination.Inputs[SQL Server Destination Input]"
+              name="ValidRow"
+              startId="Package\ImportRecenzja\Conditional Split.Outputs[ValidRow]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1608,6 +3731,22 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\ImportWydzial" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{01AE05A2-87E7-4135-84F7-764CAB44E29D}"
+      DTS:From="Package\ImportWydzial"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\ImportPraca" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{63CE13C4-9BC5-49EA-B296-8D7E123CB9C0}"
+      DTS:From="Package\ImportPraca"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\ImportRecenzja" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1630,6 +3769,14 @@
           Id="Package\ImportOsoba"
           TopLeft="754.5,42.5" />
         <NodeLayout
+          Size="137,42"
+          Id="Package\ImportPraca"
+          TopLeft="289,195" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\ImportRecenzja"
+          TopLeft="459,197" />
+        <NodeLayout
           Size="189,42"
           Id="Package\ImportStopienNaukowy"
           TopLeft="521,45" />
@@ -1640,7 +3787,7 @@
         <NodeLayout
           Size="147,42"
           Id="Package\ImportWydzial"
-          TopLeft="350,201" />
+          TopLeft="81,191" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="710,64.75">
@@ -1725,26 +3872,70 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-401.5,116.5"
+              EndConnector="-670.5,106.5"
               Start="0,0"
-              End="-401.5,109">
+              End="-670.5,99">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.25" />
+                    End="0,49.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,54.25"
-                    Point2="0,58.25"
-                    Point3="-4,58.25" />
+                    Point1="0,49.25"
+                    Point2="0,53.25"
+                    Point3="-4,53.25" />
                   <mssgle:LineSegment
-                    End="-397.5,58.25" />
+                    End="-666.5,53.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="-397.5,58.25"
-                    Point2="-401.5,58.25"
-                    Point3="-401.5,62.25" />
+                    Point1="-666.5,53.25"
+                    Point2="-670.5,53.25"
+                    Point3="-670.5,57.25" />
                   <mssgle:LineSegment
-                    End="-401.5,109" />
+                    End="-670.5,99" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="228,214">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61,0"
+              Start="0,0"
+              End="53.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="426,217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33,0"
+              Start="0,0"
+              End="25.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="25.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1760,41 +3951,45 @@
     design-time-name="Package\ImportOsoba">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\ImportOsoba\Conditional Split"
-          TopLeft="188,322" />
+          Size="171,42"
+          Id="Package\ImportOsoba\OLE DB Destination"
+          TopLeft="537.5,172.5" />
         <NodeLayout
           Size="151,42"
           Id="Package\ImportOsoba\Flat File Source"
           TopLeft="28,41" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\ImportOsoba\Script Component"
+          TopLeft="101,158" />
         <EdgeLayout
           Id="Package\ImportOsoba.Paths[Flat File Source Output]"
           TopLeft="103.5,83">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="137.5,239"
+              EndConnector="79,75"
               Start="0,0"
-              End="137.5,231.5">
+              End="79,67.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,137.934865900383" />
+                    End="0,33.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,137.934865900383"
-                    Point2="0,141.934865900383"
-                    Point3="4,141.934865900383" />
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="4,37.5" />
                   <mssgle:LineSegment
-                    End="133.5,141.934865900383" />
+                    End="75,37.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="133.5,141.934865900383"
-                    Point2="137.5,141.934865900383"
-                    Point3="137.5,145.934865900383" />
+                    Point1="75,37.5"
+                    Point2="79,37.5"
+                    Point3="79,41.5" />
                   <mssgle:LineSegment
-                    End="137.5,231.5" />
+                    End="79,67.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1803,44 +3998,38 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\ImportOsoba\OLE DB Destination"
-          TopLeft="537.5,172.5" />
         <EdgeLayout
-          Id="Package\ImportOsoba.Paths[ValidRows]"
-          TopLeft="290,322">
+          Id="Package\ImportOsoba.Paths[OsobaOutput]"
+          TopLeft="264,179">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="333,-107.5"
+              EndConnector="273.5,14.5"
               Start="0,0"
-              End="333,-100">
+              End="266,14.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-39.6590038314176" />
+                    End="132.75,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-39.6590038314176"
-                    Point2="0,-43.6590038314176"
-                    Point3="4,-43.6590038314176" />
+                    Point1="132.75,0"
+                    Point2="136.75,0"
+                    Point3="136.75,4" />
                   <mssgle:LineSegment
-                    End="329,-43.6590038314176" />
+                    End="136.75,10.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="329,-43.6590038314176"
-                    Point2="333,-43.6590038314176"
-                    Point3="333,-47.6590038314176" />
+                    Point1="136.75,10.5"
+                    Point2="136.75,14.5"
+                    Point3="140.75,14.5" />
                   <mssgle:LineSegment
-                    End="333,-100" />
+                    End="266,14.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="143.14923828125,-38.6590038314176,46.7015234375,9.7490234375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1860,10 +4049,250 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\ImportPraca">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\ImportPraca\Derived Column"
+          TopLeft="201,158" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\ImportPraca\Data Conversion"
+          TopLeft="383,217" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\ImportPraca\SQL Server Destination"
+          TopLeft="207,385" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\ImportPraca\Flat File Source"
+          TopLeft="44,50" />
+        <EdgeLayout
+          Id="Package\ImportPraca.Paths[Derived Column Output]"
+          TopLeft="355,179">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28,59"
+              Start="0,0"
+              End="20.5,59">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="10,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10,0"
+                    Point2="14,0"
+                    Point3="14,4" />
+                  <mssgle:LineSegment
+                    End="14,55" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14,55"
+                    Point2="14,59"
+                    Point3="18,59" />
+                  <mssgle:LineSegment
+                    End="20.5,59" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ImportPraca.Paths[Data Conversion Output]"
+          TopLeft="461,259">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-160,126"
+              Start="0,0"
+              End="-160,118.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59"
+                    Point2="0,63"
+                    Point3="-4,63" />
+                  <mssgle:LineSegment
+                    End="-156,63" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-156,63"
+                    Point2="-160,63"
+                    Point3="-160,67" />
+                  <mssgle:LineSegment
+                    End="-160,118.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ImportPraca.Paths[Flat File Source Output]"
+          TopLeft="119.5,92">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="158.5,66"
+              Start="0,0"
+              End="158.5,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29"
+                    Point2="0,33"
+                    Point3="4,33" />
+                  <mssgle:LineSegment
+                    End="154.5,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="154.5,33"
+                    Point2="158.5,33"
+                    Point3="158.5,37" />
+                  <mssgle:LineSegment
+                    End="158.5,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ImportPraca\SQL Server Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\ImportRecenzja">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="188,42"
+          Id="Package\ImportRecenzja\SQL Server Destination"
+          TopLeft="351,192" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\ImportRecenzja\Conditional Split"
+          TopLeft="98,172" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\ImportRecenzja\Flat File Source"
+          TopLeft="44,50" />
+        <EdgeLayout
+          Id="Package\ImportRecenzja.Paths[ValidRow]"
+          TopLeft="253,193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98,20"
+              Start="0,0"
+              End="90.5,20">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45,0"
+                    Point2="49,0"
+                    Point3="49,4" />
+                  <mssgle:LineSegment
+                    End="49,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49,16"
+                    Point2="49,20"
+                    Point3="53,20" />
+                  <mssgle:LineSegment
+                    End="90.5,20" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="27.8577734375,-15.7490234375,42.284453125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ImportRecenzja.Paths[Flat File Source Output]"
+          TopLeft="119.5,92">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56,80"
+              Start="0,0"
+              End="56,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36"
+                    Point2="0,40"
+                    Point3="4,40" />
+                  <mssgle:LineSegment
+                    End="52,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="52,40"
+                    Point2="56,40"
+                    Point3="56,44" />
+                  <mssgle:LineSegment
+                    End="56,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ImportRecenzja\SQL Server Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\ImportStopienNaukowy">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="188,42"
           Id="Package\ImportStopienNaukowy\SQL Server Destination"
@@ -1903,7 +4332,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1921,15 +4352,15 @@
     design-time-name="Package\ImportTypStudiow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\ImportTypStudiow\Flat File Source"
-          TopLeft="44,50" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="188,42"
           Id="Package\ImportTypStudiow\SQL Server Destination"
           TopLeft="346,145" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\ImportTypStudiow\Flat File Source"
+          TopLeft="44,50" />
         <EdgeLayout
           Id="Package\ImportTypStudiow.Paths[Flat File Source Output]"
           TopLeft="119.5,92">
@@ -1961,7 +4392,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1979,7 +4412,7 @@
     design-time-name="Package\ImportWydzial">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="151,42"
           Id="Package\ImportWydzial\Flat File Source"
@@ -2023,7 +4456,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2057,7 +4492,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
