@@ -1,0 +1,169 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3bebc3e7-d5a1-48cf-93e2-99226b3b2f2f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Prace Dyplomowe Dw 1</ID>
+  <Name>Prace Dyplomowe Dw 1</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="0fd7eb93-3583-4b4b-9a7d-0108100556f0">
+      <ID>Dim Wydzial</ID>
+      <Name>Dim Wydzial</Name>
+      <DimensionID>Dim Wydzial</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e1c95502-d2c2-4b90-ab8d-cfe1a866bc7d">
+          <AttributeID>ID Wydzial</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ec6c3532-8989-43ba-8bc6-61c015984e0f">
+      <ID>Dim Data</ID>
+      <Name>Dim Data</Name>
+      <DimensionID>Dim Data</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3abfe68d-c685-44a4-a8b5-72801f02fa21">
+          <AttributeID>Miesiac Rok</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c3bce0b4-164c-4c40-b119-18e0c692ca21">
+          <AttributeID>Kwartal</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="879f4c4c-a299-46cd-b6fc-490115e1ae2e">
+          <AttributeID>Rok</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b292311b-4c45-49a1-9a9f-e2c6ea1497b9">
+          <AttributeID>ID Data</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ed2fa215-aa6f-44a2-8a2f-b4e49b5352fd">
+          <AttributeID>Miesiac</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e588aa9b-93d1-4f8f-89b6-8628c2334b30">
+          <AttributeID>Data</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="218eaec7-0bdb-4f0f-b5e4-d3840b64e2eb">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="dc6c4fbe-9d60-42a6-b7e6-afd6a542db57">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="3d649c11-ac8d-46b9-b6c7-baa82a2ac9e9">
+      <ID>Fact Praca Dyplomowa</ID>
+      <Name>Fact Praca Dyplomowa</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7e3bc52f-8538-4e15-bdc6-2411a0177d72">
+          <ID>Ocena</ID>
+          <Name>Ocena</Name>
+          <Source dwd:design-time-name="1e45cc27-c971-4fcb-96fa-1690517c117d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3ae1681d-987a-44bb-a5bb-7f8c40cb9abd">
+              <TableID>dbo_FactPracaDyplomowa</TableID>
+              <ColumnID>Ocena</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1aa1199e-c699-480d-8879-b1fc98f65e4b">
+          <ID>Fact Praca Dyplomowa Count</ID>
+          <Name>Fact Praca Dyplomowa Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="bbe6415d-1b55-4001-ab3f-e8b8fe4da90c">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="c9476c04-b612-414c-8e4f-e5ad08700f13">
+              <TableID>dbo_FactPracaDyplomowa</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="235f6fa2-88a8-4019-9da4-1c2919bd72e3">
+          <CubeDimensionID>Dim Wydzial</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9e16171b-2d6f-4e45-9cff-56729ac6441e">
+              <AttributeID>ID Wydzial</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ae2a7da9-8346-474e-8be4-14aa9d07cf5c">
+                  <DataType>SmallInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ed22d3ac-9c95-423f-b44b-2bb1b4237d5c">
+                    <TableID>dbo_FactPracaDyplomowa</TableID>
+                    <ColumnID>ID_Wydzial</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="711cb39c-7d01-46ec-8708-bce44f23a28b">
+          <CubeDimensionID>Dim Data</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e876a205-fdfd-4c18-92c4-d6e55262c445">
+              <AttributeID>ID Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bdc33bd9-44b1-4d5b-ad1f-a1ee4c0c3b8f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8bf1572e-4d68-419c-8718-c528bb8a644b">
+                    <TableID>dbo_FactPracaDyplomowa</TableID>
+                    <ColumnID>ID_Data</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="161ef4ed-1c7f-4d0a-9331-9dc51b819b4b">
+    <DataSourceViewID>Prace Dyplomowe Dw</DataSourceViewID>
+  </Source>
+</Cube>

@@ -1,0 +1,235 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="81099085-9c94-4ca9-9030-5ff0541b9104" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Prace Dyplomowe</ID>
+  <Name>Prace Dyplomowe</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Prace Dyplomowe</DataSourceID>
+  <Schema>
+    <xs:schema id="Prace_x0020_Dyplomowe" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Prace_x0020_Dyplomowe" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="d6448c73-ff78-4ecb-938b-4392169a0371">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Autor" msprop:design-time-name="1d6b2681-f6fa-48d3-b849-f0cd22361c86" msprop:DbTableName="Autor" msprop:FriendlyName="Autor" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Osoba" msprop:design-time-name="4552d25d-4aa6-4bf4-abf9-7fc765dd19a7" msprop:DbColumnName="ID_Osoba" msprop:FriendlyName="ID_Osoba" type="xs:int" />
+                  <xs:element name="ID_Praca" msprop:design-time-name="640cc9ab-561a-4927-b350-51af7177e563" msprop:DbColumnName="ID_Praca" msprop:FriendlyName="ID_Praca" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Osoba" msprop:design-time-name="82868ed9-4f5b-4b93-8774-90dcdda11fbf" msprop:DbTableName="Osoba" msprop:FriendlyName="Osoba" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Osoba" msprop:design-time-name="bd107e68-4545-4381-8684-4f44906edb5c" msprop:DbColumnName="ID_Osoba" msprop:FriendlyName="ID_Osoba" type="xs:int" />
+                  <xs:element name="Imie" msprop:design-time-name="1b6c484c-e828-44f4-aa19-86caececdd4a" msprop:DbColumnName="Imie" msprop:FriendlyName="Imie">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Nazwisko" msprop:design-time-name="3c700e93-a10a-4b24-aaf9-fe13830bcbf4" msprop:DbColumnName="Nazwisko" msprop:FriendlyName="Nazwisko">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ID_Stopien" msprop:design-time-name="bce18b7b-4e0b-4a9e-b946-011240c09d45" msprop:DbColumnName="ID_Stopien" msprop:FriendlyName="ID_Stopien" type="xs:short" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_PracaDyplomowa" msprop:design-time-name="a77a21c8-1db5-405a-b261-953d14fc71b4" msprop:DbTableName="PracaDyplomowa" msprop:FriendlyName="PracaDyplomowa" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Praca" msprop:design-time-name="e6f0e368-d60e-457c-94ca-2852c2b37934" msprop:DbColumnName="ID_Praca" msprop:FriendlyName="ID_Praca" type="xs:int" />
+                  <xs:element name="Temat" msprop:design-time-name="6e7125d7-a6fe-4bde-8cd2-1126c8c4bcf7" msprop:DbColumnName="Temat" msprop:FriendlyName="Temat">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Data" msprop:design-time-name="309abcba-695f-4467-9522-7179397f8b62" msprop:DbColumnName="Data" msprop:FriendlyName="Data" type="xs:dateTime" />
+                  <xs:element name="Ocena" msprop:design-time-name="29a1e259-18a2-45ac-95dd-302937687985" msprop:DbColumnName="Ocena" msprop:FriendlyName="Ocena" type="xs:short" />
+                  <xs:element name="ID_TypStudiow" msprop:design-time-name="a8a25baa-b2f4-4e72-b9a1-9d9ac9dcd8c6" msprop:DbColumnName="ID_TypStudiow" msprop:FriendlyName="ID_TypStudiow" type="xs:short" />
+                  <xs:element name="ID_Promotor" msprop:design-time-name="1225b9b3-c49b-4655-a0c0-493969dde7aa" msprop:DbColumnName="ID_Promotor" msprop:FriendlyName="ID_Promotor" type="xs:int" />
+                  <xs:element name="ID_Wydzial" msprop:design-time-name="d2c6dd7c-84e1-40f2-a9c5-643edf7a8204" msprop:DbColumnName="ID_Wydzial" msprop:FriendlyName="ID_Wydzial" type="xs:short" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Recenzja" msprop:design-time-name="d9a3abbc-bcae-4da7-bb6e-8478a64de8a5" msprop:DbTableName="Recenzja" msprop:FriendlyName="Recenzja" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Osoba" msprop:design-time-name="aeab4fb9-20d2-46ab-84e4-ae55a5e922c4" msprop:DbColumnName="ID_Osoba" msprop:FriendlyName="ID_Osoba" type="xs:int" />
+                  <xs:element name="ID_Praca" msprop:design-time-name="62ce6904-8ccd-4586-8f9f-77b838720139" msprop:DbColumnName="ID_Praca" msprop:FriendlyName="ID_Praca" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Wydzial" msprop:design-time-name="8f3fea76-86ab-4390-84d0-ad0a30934efd" msprop:DbTableName="Wydzial" msprop:FriendlyName="Wydzial" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Wydzial" msprop:design-time-name="883a7a24-513f-4c7c-a87d-4e2e7de1ea6c" msprop:DbColumnName="ID_Wydzial" msprop:FriendlyName="ID_Wydzial" type="xs:short" />
+                  <xs:element name="NazwaWydzialu" msprop:design-time-name="2afabe8a-6e59-426c-ac39-bf314406f93d" msprop:DbColumnName="NazwaWydzialu" msprop:FriendlyName="NazwaWydzialu">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Slownik" msprop:design-time-name="f95bb7f1-5776-467c-9550-d73a853e94cf" msprop:DbTableName="Slownik" msprop:FriendlyName="Slownik" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_SlowoKluczowe" msprop:design-time-name="782050c8-12ef-4c47-8b0f-5d3783564dae" msprop:DbColumnName="ID_SlowoKluczowe" msprop:FriendlyName="ID_SlowoKluczowe" type="xs:int" />
+                  <xs:element name="ID_Praca" msprop:design-time-name="f4789ab0-b526-423d-99bc-24babac06456" msprop:DbColumnName="ID_Praca" msprop:FriendlyName="ID_Praca" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_StopienNaukowy" msprop:design-time-name="1d8914d1-dc36-4638-8fe2-f3df12db9236" msprop:DbTableName="StopienNaukowy" msprop:FriendlyName="StopienNaukowy" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Stopien" msprop:design-time-name="1d911b07-de3e-4d74-9f41-b0547d4e45f3" msprop:DbColumnName="ID_Stopien" msprop:FriendlyName="ID_Stopien" type="xs:short" />
+                  <xs:element name="Stopien" msprop:design-time-name="9e684884-61f6-41fa-8ffb-2f9e5d1ac3da" msprop:DbColumnName="Stopien" msprop:FriendlyName="Stopien">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_TypStudiow" msprop:design-time-name="746c64a8-d453-4dd5-864e-eaab0e3acd83" msprop:DbTableName="TypStudiow" msprop:FriendlyName="TypStudiow" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_TypStudiow" msprop:design-time-name="a706de5e-1309-44ae-bdb5-614414b2b968" msprop:DbColumnName="ID_TypStudiow" msprop:FriendlyName="ID_TypStudiow" type="xs:short" />
+                  <xs:element name="NazwaTypu" msprop:design-time-name="87d4eb1e-ba8a-4a9d-b688-116a2b062887" msprop:DbColumnName="NazwaTypu" msprop:FriendlyName="NazwaTypu">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_SlowoKluczowe" msprop:design-time-name="210d3164-d191-409d-af21-1fb921000fa6" msprop:DbTableName="SlowoKluczowe" msprop:FriendlyName="SlowoKluczowe" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_SlowoKluczowe" msprop:design-time-name="566b8f07-98b7-42ad-90b9-26019b5c3481" msprop:DbColumnName="ID_SlowoKluczowe" msprop:FriendlyName="ID_SlowoKluczowe" type="xs:int" />
+                  <xs:element name="SlowoKluczowe" msprop:design-time-name="e76fc639-d01c-413c-b15a-6abfeb7c30b1" msprop:DbColumnName="SlowoKluczowe" msprop:FriendlyName="SlowoKluczowe">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Osoba" />
+          <xs:field xpath="ID_Osoba" />
+        </xs:unique>
+        <xs:unique name="dbo_PracaDyplomowa_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_PracaDyplomowa" />
+          <xs:field xpath="ID_Praca" />
+        </xs:unique>
+        <xs:unique name="dbo_Wydzial_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Wydzial" />
+          <xs:field xpath="ID_Wydzial" />
+        </xs:unique>
+        <xs:unique name="dbo_StopienNaukowy_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_StopienNaukowy" />
+          <xs:field xpath="ID_Stopien" />
+        </xs:unique>
+        <xs:unique name="dbo_TypStudiow_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_TypStudiow" />
+          <xs:field xpath="ID_TypStudiow" />
+        </xs:unique>
+        <xs:unique name="dbo_SlowoKluczowe_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_SlowoKluczowe" />
+          <xs:field xpath="ID_SlowoKluczowe" />
+        </xs:unique>
+        <xs:keyref name="FK_Slownik_PracaDyplomowa" refer="dbo_PracaDyplomowa_Constraint1">
+          <xs:selector xpath=".//dbo_Slownik" />
+          <xs:field xpath="ID_Praca" />
+        </xs:keyref>
+        <xs:keyref name="FK_Slownik_SlowoKluczowe" refer="dbo_SlowoKluczowe_Constraint1">
+          <xs:selector xpath=".//dbo_Slownik" />
+          <xs:field xpath="ID_SlowoKluczowe" />
+        </xs:keyref>
+        <xs:keyref name="FK_Recenzja_Osoba" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Recenzja" />
+          <xs:field xpath="ID_Osoba" />
+        </xs:keyref>
+        <xs:keyref name="FK_Recenzja_PracaDyplomowa" refer="dbo_PracaDyplomowa_Constraint1">
+          <xs:selector xpath=".//dbo_Recenzja" />
+          <xs:field xpath="ID_Praca" />
+        </xs:keyref>
+        <xs:keyref name="FK_PracaDyplomowa_Wydzial" refer="dbo_Wydzial_Constraint1">
+          <xs:selector xpath=".//dbo_PracaDyplomowa" />
+          <xs:field xpath="ID_Wydzial" />
+        </xs:keyref>
+        <xs:keyref name="FK_PracaDyplomowa_TypStudiow" refer="dbo_TypStudiow_Constraint1">
+          <xs:selector xpath=".//dbo_PracaDyplomowa" />
+          <xs:field xpath="ID_TypStudiow" />
+        </xs:keyref>
+        <xs:keyref name="FK_Osoba_StopienNaukowy" refer="dbo_StopienNaukowy_Constraint1">
+          <xs:selector xpath=".//dbo_Osoba" />
+          <xs:field xpath="ID_Stopien" />
+        </xs:keyref>
+        <xs:keyref name="FK_Autor_PracaDyplomowa" refer="dbo_PracaDyplomowa_Constraint1">
+          <xs:selector xpath=".//dbo_Autor" />
+          <xs:field xpath="ID_Praca" />
+        </xs:keyref>
+        <xs:keyref name="FK_Autor_Osoba" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Autor" />
+          <xs:field xpath="ID_Osoba" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Prace_x0020_Dyplomowe xmlns="" />
+  </Schema>
+</DataSourceView>
