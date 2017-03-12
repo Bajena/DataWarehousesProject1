@@ -1,0 +1,2937 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/5/2017 5:11:37 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-6KEOPAN"
+  DTS:CreatorName="DESKTOP-6KEOPAN\Janek"
+  DTS:DTSID="{FAD3C5D5-08F5-4E42-81DA-4F36C4266ADC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="96"
+  DTS:VersionGUID="{1FBD503A-4E99-4A0E-AB8C-472311B09791}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AutorConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AFCD8DD3-05B7-4450-BF11-A3186C921E41}"
+      DTS:ObjectName="AutorConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Autor.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Osoba"
+              DTS:DTSID="{9800AF94-3723-4668-A436-CDD20F73215A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Praca"
+              DTS:DTSID="{85732CAA-3F32-47F9-A9FD-0C779F6DE11C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AutorOutManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7C102622-E6C1-4A92-A3A0-DE9525B7CE7E}"
+      DTS:ObjectName="AutorOutManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Desktop\AutorOut.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Osoba"
+              DTS:DTSID="{84F9A7B7-F673-4417-810D-A1058D7E15AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Praca"
+              DTS:DTSID="{C84630CD-6807-44C3-B99E-D625F3C717C4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E16AC272-F085-49A2-934F-89C709DCFF6A}"
+      DTS:ObjectName="DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN\SQLEXPRESS;Initial Catalog=PraceDyplomowe;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{97DA1EAB-1A32-43BA-8B44-672314C2B57A}"
+      DTS:ObjectName="DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN\SQLEXPRESS;Initial Catalog=PraceDyplomoweDw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OsobaConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5BEF3732-55A9-4FE2-BF3B-F321634FF958}"
+      DTS:ObjectName="OsobaConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter="_x000D__x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Osoba.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Osoba"
+              DTS:DTSID="{61FF895A-AC93-4A19-9686-790BB6CA42BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Imie"
+              DTS:DTSID="{4EF1BB54-9C1F-4F5D-9BFF-C2149FFAD418}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nazwisko"
+              DTS:DTSID="{949E3951-4212-4F86-8190-B4BE48C7B381}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Stopien"
+              DTS:DTSID="{B8EDCCF4-9144-44F5-8DBA-57E6FED7632A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OsobaDestinationConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F485BC75-8D9A-4664-B399-1C5821A51552}"
+      DTS:ObjectName="OsobaDestinationConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Desktop\OsobaFormatted.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{EB7CFDE2-2AAE-4E5A-BB08-45233EA67BE5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Imie"
+              DTS:DTSID="{FA3CC8A2-661D-484E-A023-8950D7D0304B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nazwisko"
+              DTS:DTSID="{1E69C4A6-629F-44A7-9784-6B28F4408023}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stopien"
+              DTS:DTSID="{5124B1F9-C8AF-48D5-8412-BE64C154E015}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PracaDyplomowaConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{776173EB-5FD5-44BD-B257-7B41A22176AE}"
+      DTS:ObjectName="PracaDyplomowaConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x003B_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\PracaDyplomowa.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Praca"
+              DTS:DTSID="{77992289-8D1F-4181-BECC-EB31D8655992}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Temat"
+              DTS:DTSID="{B8130E23-8842-49A8-8080-1F6FE33B23CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data"
+              DTS:DTSID="{7FB3BED9-ADA5-4CE9-9FEB-36AE6D5CBAEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ocena"
+              DTS:DTSID="{41437A1A-56F4-41C5-9351-66DBB889B9B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_TypStudiow"
+              DTS:DTSID="{729C7BB1-D489-4A4D-9EF5-A07A7FF5492B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Promotor"
+              DTS:DTSID="{463A5ACD-758D-477F-BF34-B3ABC5D28220}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Wydzial"
+              DTS:DTSID="{B3186F6B-F78B-4C8A-8138-5A78A748E9D6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PraceDyplomoweConnection]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{8E18D596-01C6-4739-8912-5902478A0EB3}"
+      DTS:ObjectName="PraceDyplomoweConnection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN\SQLEXPRESS;Integrated Security=SSPI;Connect Timeout=30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RecenzjaConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{65BFA672-EEA4-4965-B110-BE79C60AA034}"
+      DTS:ObjectName="RecenzjaConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Recenzja.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Osoba"
+              DTS:DTSID="{625B57DB-38DE-40AF-BD5E-ABFFA4130E75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Praca"
+              DTS:DTSID="{EF5C9072-E406-4045-9354-FCF66BF05E90}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SlownikConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3898DB89-E1A8-4C73-BC03-820E8DCB9B92}"
+      DTS:ObjectName="SlownikConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Slownik.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_SlowoKluczowe"
+              DTS:DTSID="{9575F150-FCEA-4213-84CB-D8F81A029F58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Praca"
+              DTS:DTSID="{1CF4F228-F37B-4F2B-8A36-F496D96CD709}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SlowoKluczoweConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8643831D-87EC-4CFE-91F2-907ED8FA31A2}"
+      DTS:ObjectName="SlowoKluczoweConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\SlowoKluczowe.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_SlowoKluczowe"
+              DTS:DTSID="{1C858B3F-6266-4E0E-88A8-AD7B64973BCE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SlowoKluczowe"
+              DTS:DTSID="{5EEE63EB-1BBE-4BDC-851D-54B513D117F1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[StopienNaukowyConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{14F3D07D-5790-424F-AC78-2E6DCF22FAC0}"
+      DTS:ObjectName="StopienNaukowyConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\StopienNaukowy.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Stopien"
+              DTS:DTSID="{80E0C8CC-D93E-4E53-A3E2-48C913A1C323}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="17"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stopien"
+              DTS:DTSID="{DEE71DBA-4D8A-4D77-8ACF-206FE0D39890}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TypStudiowConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C68CC8F3-B075-4866-B37C-D8FF21EAB739}"
+      DTS:ObjectName="TypStudiowConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\TypStudiow.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_TypStudiow"
+              DTS:DTSID="{715E5E2F-6855-4AF9-B9FA-BBD15F239580}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NazwaTypu"
+              DTS:DTSID="{67A88D0B-6F4D-4E1D-B1A0-6C2B92FC16CC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WydzialConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C859DBFA-B8C4-4EE4-BE24-4077B13A4D31}"
+      DTS:ObjectName="WydzialConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Wydzial.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Wydzial"
+              DTS:DTSID="{316D7797-6811-4230-8204-AB911FCD51E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NazwaWydzialu"
+              DTS:DTSID="{53F007C9-F4C1-4CDE-81C5-79971DA6EBA8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CreatePraceDyplomoweDw"
+      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:Description="Execute T-SQL Statement Task"
+      DTS:DTSID="{94DEF189-AB5B-4DC2-B1F1-D2B1EE343AA4}"
+      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CreatePraceDyplomoweDw"
+      DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8E18D596-01C6-4739-8912-5902478A0EB3}"
+          SQLTask:SqlStatementSource="DROP DATABASE PraceDyplomoweDW&#xA;GO&#xA;&#xA;CREATE DATABASE PraceDyplomoweDw&#xA;GO&#xA;&#xA;USE PraceDyplomoweDw&#xA;GO&#xA;&#xA;CREATE TABLE FactPracaDyplomowa ( &#xA;&#x9;ID_Praca int NOT NULL,&#xA;&#x9;Temat varchar(500) NOT NULL,&#xA;&#x9;Ocena smallint NOT NULL,&#xA;&#x9;ID_TypStudiow smallint NOT NULL,&#xA;&#x9;ID_Promotor int NOT NULL,&#xA;&#x9;ID_Wydzial smallint NOT NULL,&#xA;&#x9;ID_Data int NOT NULL&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE DimWydzial ( &#xA;&#x9;ID_Wydzial smallint NOT NULL,&#xA;&#x9;NazwaWydzialu varchar(50) NOT NULL&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE DimTypStudiow ( &#xA;&#x9;ID_TypStudiow smallint NOT NULL,&#xA;&#x9;NazwaTypu varchar(50) NOT NULL&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE DimData ( &#xA;&#x9;ID_Data INT primary key,&#xA;&#x9;Data smalldatetime NOT NULL,&#xA;&#x9;Rok int NOT NULL,&#xA;&#x9;Miesiac int NOT NULL,&#xA;&#x9;--MiesiacNazwa varchar(20) NOT NULL,&#xA;&#x9;MiesiacRok varchar(12) NOT NULL,&#xA;&#x9;Kwartal int NOT NULL&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE DimOsoba ( &#xA;&#x9;ID_Osoba int NOT NULL,&#xA;&#x9;Imie varchar(20) NOT NULL,&#xA;&#x9;Nazwisko varchar(50) NOT NULL,&#xA;&#x9;ID_Stopien smallint&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE DimStopienNaukowy ( &#xA;&#x9;ID_Stopien smallint NOT NULL,&#xA;&#x9;Stopien varchar(50) NOT NULL&#xA;)&#xA;GO&#xA;&#xA;&#xA;--CREATE TABLE Recenzja ( &#xA;--&#x9;ID_Osoba int NOT NULL,&#xA;--&#x9;ID_Praca int NOT NULL&#xA;--)&#xA;--GO&#xA;&#xA;--CREATE TABLE Slownik ( &#xA;--&#x9;ID_SlowoKluczowe int NOT NULL,&#xA;--&#x9;ID_Praca int NOT NULL&#xA;--)&#xA;--GO&#xA;&#xA;--CREATE TABLE SlowoKluczowe ( &#xA;--&#x9;ID_SlowoKluczowe int NOT NULL,&#xA;--&#x9;SlowoKluczowe varchar(50) NOT NULL&#xA;--)&#xA;--GO&#xA;&#xA;&#xA;ALTER TABLE DimOsoba ADD CONSTRAINT PK_Osoba &#xA;&#x9;PRIMARY KEY CLUSTERED (ID_Osoba)&#xA;GO&#xA;&#xA;ALTER TABLE FactPracaDyplomowa ADD CONSTRAINT PK_PracaDyplomowa &#xA;&#x9;PRIMARY KEY CLUSTERED (ID_Praca)&#xA;GO&#xA;&#xA;&#xA;--ALTER TABLE SlowoKluczowe ADD CONSTRAINT PK_SlowoKluczowe &#xA;--&#x9;PRIMARY KEY CLUSTERED (ID_SlowoKluczowe)&#xA;--GO&#xA;&#xA;ALTER TABLE DimStopienNaukowy ADD CONSTRAINT PK_StopienNaukowy &#xA;&#x9;PRIMARY KEY CLUSTERED (ID_Stopien)&#xA;GO&#xA;&#xA;ALTER TABLE DimTypStudiow ADD CONSTRAINT PK_TypStudiow &#xA;&#x9;PRIMARY KEY CLUSTERED (ID_TypStudiow)&#xA;GO&#xA;&#xA;ALTER TABLE DimWydzial ADD CONSTRAINT PK_Wydzial &#xA;&#x9;PRIMARY KEY CLUSTERED (ID_Wydzial)&#xA;GO&#xA;&#xA;&#xA;&#xA;--ALTER TABLE Autor ADD CONSTRAINT FK_Autor_Osoba &#xA;--&#x9;FOREIGN KEY (ID_Osoba) REFERENCES Osoba (ID_Osoba)&#xA;--GO&#xA;&#xA;--ALTER TABLE Autor ADD CONSTRAINT FK_Autor_PracaDyplomowa &#xA;--&#x9;FOREIGN KEY (ID_Praca) REFERENCES PracaDyplomowa (ID_Praca)&#xA;--GO&#xA;&#xA;ALTER TABLE DimOsoba ADD CONSTRAINT FK_Osoba_StopienNaukowy &#xA;&#x9;FOREIGN KEY (ID_Stopien) REFERENCES DimStopienNaukowy (ID_Stopien)&#xA;GO&#xA;&#xA;ALTER TABLE FactPracaDyplomowa ADD CONSTRAINT FK_PracaDyplomowa_TypStudiow &#xA;&#x9;FOREIGN KEY (ID_TypStudiow) REFERENCES DimTypStudiow (ID_TypStudiow)&#xA;GO&#xA;&#xA;ALTER TABLE FactPracaDyplomowa ADD CONSTRAINT FK_PracaDyplomowa_Wydzial &#xA;&#x9;FOREIGN KEY (ID_Wydzial) REFERENCES DimWydzial (ID_Wydzial)&#xA;GO&#xA;&#xA;ALTER TABLE FactPracaDyplomowa ADD CONSTRAINT FK_PracaDyplomowa_Data&#xA;&#x9;FOREIGN KEY (ID_Data) REFERENCES DimData (ID_Data)&#xA;GO&#xA;&#xA;ALTER TABLE FactPracaDyplomowa ADD CONSTRAINT FK_PracaDyplomowa_Promotor&#xA;&#x9;FOREIGN KEY (ID_Promotor) REFERENCES DimOsoba (ID_Osoba)&#xA;GO&#xA;&#xA;--ALTER TABLE Recenzja ADD CONSTRAINT FK_Recenzja_Osoba &#xA;--&#x9;FOREIGN KEY (ID_Osoba) REFERENCES Osoba (ID_Osoba)&#xA;--GO&#xA;&#xA;--ALTER TABLE Recenzja ADD CONSTRAINT FK_Recenzja_PracaDyplomowa &#xA;--&#x9;FOREIGN KEY (ID_Praca) REFERENCES PracaDyplomowa (ID_Praca)&#xA;--GO&#xA;&#xA;--ALTER TABLE Slownik ADD CONSTRAINT FK_Slownik_PracaDyplomowa &#xA;--&#x9;FOREIGN KEY (ID_Praca) REFERENCES PracaDyplomowa (ID_Praca)&#xA;--GO&#xA;&#xA;--ALTER TABLE Slownik ADD CONSTRAINT FK_Slownik_SlowoKluczowe &#xA;--&#x9;FOREIGN KEY (ID_SlowoKluczowe) REFERENCES SlowoKluczowe (ID_SlowoKluczowe)&#xA;--GO&#xA;"
+          SQLTask:ServerVersion="9"
+          SQLTask:ExtendedLogging="True"
+          SQLTask:LocalConnectionForLogging=""
+          SQLTask:TaskName=""
+          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PopulateDimData"
+      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:Description="Execute T-SQL Statement Task"
+      DTS:DTSID="{242303dd-1da3-46fa-8f92-77c8e19eb69b}"
+      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PopulateDimData"
+      DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8E18D596-01C6-4739-8912-5902478A0EB3}"
+          SQLTask:SqlStatementSource="USE PraceDyplomoweDw&#xA;GO&#xA;&#xA;/********************************************************************************************/&#xA;--Specify Start Date and End date here&#xA;--Value of Start Date Must be Less than Your End Date &#xA;&#xA;DECLARE @StartDate DATETIME = '01/01/1970' --Starting value of Date Range&#xA;DECLARE @EndDate DATETIME = '01/01/2011' --End Value of Date Range&#xA;&#xA;--Temporary Variables To Hold the Values During Processing of Each Date of Year&#xA;DECLARE&#xA;&#x9;@DayOfWeekInMonth INT,&#xA;&#x9;@DayOfWeekInYear INT,&#xA;&#x9;@DayOfQuarter INT,&#xA;&#x9;@WeekOfMonth INT,&#xA;&#x9;@CurrentYear INT,&#xA;&#x9;@CurrentMonth INT,&#xA;&#x9;@CurrentQuarter INT&#xA;&#xA;/*Table Data type to store the day of week count for the month and year*/&#xA;DECLARE @DayOfWeek TABLE (DOW INT, MonthCount INT, QuarterCount INT, YearCount INT)&#xA;&#xA;INSERT INTO @DayOfWeek VALUES (1, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (2, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (3, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (4, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (5, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (6, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (7, 0, 0, 0)&#xA;&#xA;--Extract and assign various parts of Values from Current Date to Variable&#xA;&#xA;DECLARE @CurrentDate AS DATETIME = @StartDate&#xA;SET @CurrentMonth = DATEPART(MM, @CurrentDate)&#xA;SET @CurrentYear = DATEPART(YY, @CurrentDate)&#xA;SET @CurrentQuarter = DATEPART(QQ, @CurrentDate)&#xA;&#xA;/********************************************************************************************/&#xA;--Proceed only if Start Date(Current date ) is less than End date you specified above&#xA;&#xA;WHILE @CurrentDate &lt; @EndDate&#xA;BEGIN&#xA; &#xA;/*Begin day of week logic*/&#xA;&#xA;         /*Check for Change in Month of the Current date if Month changed then &#xA;          Change variable value*/&#xA;&#x9;IF @CurrentMonth != DATEPART(MM, @CurrentDate) &#xA;&#x9;BEGIN&#xA;&#x9;&#x9;UPDATE @DayOfWeek&#xA;&#x9;&#x9;SET MonthCount = 0&#xA;&#x9;&#x9;SET @CurrentMonth = DATEPART(MM, @CurrentDate)&#xA;&#x9;END&#xA;&#xA;        /* Check for Change in Quarter of the Current date if Quarter changed then change &#xA;         Variable value*/&#xA;&#xA;&#x9;IF @CurrentQuarter != DATEPART(QQ, @CurrentDate)&#xA;&#x9;BEGIN&#xA;&#x9;&#x9;UPDATE @DayOfWeek&#xA;&#x9;&#x9;SET QuarterCount = 0&#xA;&#x9;&#x9;SET @CurrentQuarter = DATEPART(QQ, @CurrentDate)&#xA;&#x9;END&#xA;       &#xA;        /* Check for Change in Year of the Current date if Year changed then change &#xA;         Variable value*/&#xA;&#x9;&#xA;&#xA;&#x9;IF @CurrentYear != DATEPART(YY, @CurrentDate)&#xA;&#x9;BEGIN&#xA;&#x9;&#x9;UPDATE @DayOfWeek&#xA;&#x9;&#x9;SET YearCount = 0&#xA;&#x9;&#x9;SET @CurrentYear = DATEPART(YY, @CurrentDate)&#xA;&#x9;END&#xA;&#x9;&#xA;        -- Set values in table data type created above from variables &#xA;&#xA;&#x9;UPDATE @DayOfWeek&#xA;&#x9;SET &#xA;&#x9;&#x9;MonthCount = MonthCount + 1,&#xA;&#x9;&#x9;QuarterCount = QuarterCount + 1,&#xA;&#x9;&#x9;YearCount = YearCount + 1&#xA;&#x9;WHERE DOW = DATEPART(DW, @CurrentDate)&#xA;&#xA;&#x9;SELECT&#xA;&#x9;&#x9;@DayOfWeekInMonth = MonthCount,&#xA;&#x9;&#x9;@DayOfQuarter = QuarterCount,&#xA;&#x9;&#x9;@DayOfWeekInYear = YearCount&#xA;&#x9;FROM @DayOfWeek&#xA;&#x9;WHERE DOW = DATEPART(DW, @CurrentDate)&#xA;&#x9;&#xA;&#x9;INSERT INTO DimData&#xA;&#x9;SELECT&#xA;&#x9;&#x9;CONVERT (char(8),@CurrentDate,112) as ID_Data,&#xA;&#x9;&#x9;@CurrentDate AS Data,&#xA;&#x9;&#x9;DATEPART(YEAR, @CurrentDate) AS Rok,&#xA;&#x9;&#x9;DATEPART(MM, @CurrentDate) AS Miesiac,RIGHT('0' + CONVERT(VARCHAR, DATEPART(MM, @CurrentDate)),2) + CONVERT(VARCHAR, DATEPART(YY, @CurrentDate)) AS MiesiacRok,&#xA;&#x9;&#x9;DATEPART(QQ, @CurrentDate) AS Kwartal&#xA;&#x9;SET @CurrentDate = DATEADD(DD, 1, @CurrentDate)&#xA;END"
+          SQLTask:ServerVersion="9"
+          SQLTask:ExtendedLogging="True"
+          SQLTask:LocalConnectionForLogging=""
+          SQLTask:TaskName=""
+          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PopulateDimOsoba"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{ec773ac0-239b-4f5e-bb8f-5604c10ea311}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PopulateDimOsoba"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\PopulateDimOsoba\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimOsoba]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateDimOsoba\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Osoba]"
+                      cachedDataType="i4"
+                      cachedName="ID_Osoba"
+                      externalMetadataColumnId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Osoba]"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Osoba]" />
+                    <inputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Imie]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Imie"
+                      externalMetadataColumnId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Imie]"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[Imie]" />
+                    <inputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nazwisko]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nazwisko"
+                      externalMetadataColumnId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nazwisko]"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwisko]" />
+                    <inputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Stopien]"
+                      cachedDataType="i2"
+                      cachedName="ID_Stopien"
+                      externalMetadataColumnId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Stopien]"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Stopien]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Osoba]"
+                      dataType="i4"
+                      name="ID_Osoba" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Imie" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Nazwisko" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Stopien]"
+                      dataType="i2"
+                      name="ID_Stopien" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PopulateDimOsoba\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\PopulateDimOsoba\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Osoba]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateDimOsoba\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Osoba]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Osoba]"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Osoba]"
+                      name="ID_Osoba"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Imie]"
+                      length="20"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[Imie]"
+                      name="Imie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwisko]"
+                      length="50"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nazwisko]"
+                      name="Nazwisko"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Stopien]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Stopien]"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Stopien]"
+                      name="ID_Stopien"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Osoba]"
+                      dataType="i4"
+                      name="ID_Osoba" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Imie" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Nazwisko" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Stopien]"
+                      dataType="i2"
+                      name="ID_Stopien" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Osoba]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Osoba]"
+                      name="ID_Osoba" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Imie]"
+                      name="Imie" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nazwisko]"
+                      name="Nazwisko" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Stopien]"
+                      dataType="i2"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Stopien]"
+                      name="ID_Stopien" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\PopulateDimOsoba.Paths[OLE DB Source Output]"
+              endId="Package\PopulateDimOsoba\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\PopulateDimOsoba\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PopulateDimStopienNaukowy"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6FD26305-EB71-4982-B235-13CDA634CF50}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PopulateDimStopienNaukowy"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\PopulateDimStopienNaukowy\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimStopienNaukowy]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Stopien]"
+                      cachedDataType="i2"
+                      cachedName="ID_Stopien"
+                      externalMetadataColumnId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Stopien]"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Stopien]" />
+                    <inputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Stopien]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Stopien"
+                      externalMetadataColumnId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Stopien]"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].Columns[Stopien]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Stopien]"
+                      dataType="i2"
+                      name="ID_Stopien" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Stopien]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Stopien" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\PopulateDimStopienNaukowy\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StopienNaukowy]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Stopien]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Stopien]"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Stopien]"
+                      name="ID_Stopien"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].Columns[Stopien]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Stopien]"
+                      length="50"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].Columns[Stopien]"
+                      name="Stopien"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Stopien]"
+                      dataType="i2"
+                      name="ID_Stopien" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Stopien]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Stopien" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Stopien]"
+                      dataType="i2"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Stopien]"
+                      name="ID_Stopien" />
+                    <outputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Stopien]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Stopien]"
+                      name="Stopien" />
+                    <outputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\PopulateDimStopienNaukowy.Paths[OLE DB Source Output]"
+              endId="Package\PopulateDimStopienNaukowy\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\PopulateDimStopienNaukowy\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PopulateDimTypStudiow"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8ad8ff88-9ec8-4be5-b023-8c1ffce8e522}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PopulateDimTypStudiow"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\PopulateDimTypStudiow\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimTypStudiow]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateDimTypStudiow\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_TypStudiow]"
+                      cachedDataType="i2"
+                      cachedName="ID_TypStudiow"
+                      externalMetadataColumnId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_TypStudiow]"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_TypStudiow]" />
+                    <inputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NazwaTypu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NazwaTypu"
+                      externalMetadataColumnId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NazwaTypu]"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].Columns[NazwaTypu]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_TypStudiow]"
+                      dataType="i2"
+                      name="ID_TypStudiow" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NazwaTypu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="NazwaTypu" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PopulateDimTypStudiow\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\PopulateDimTypStudiow\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TypStudiow]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateDimTypStudiow\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_TypStudiow]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_TypStudiow]"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_TypStudiow]"
+                      name="ID_TypStudiow"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].Columns[NazwaTypu]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NazwaTypu]"
+                      length="50"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].Columns[NazwaTypu]"
+                      name="NazwaTypu"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_TypStudiow]"
+                      dataType="i2"
+                      name="ID_TypStudiow" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NazwaTypu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="NazwaTypu" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_TypStudiow]"
+                      dataType="i2"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_TypStudiow]"
+                      name="ID_TypStudiow" />
+                    <outputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NazwaTypu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NazwaTypu]"
+                      name="NazwaTypu" />
+                    <outputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\PopulateDimTypStudiow.Paths[OLE DB Source Output]"
+              endId="Package\PopulateDimTypStudiow\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\PopulateDimTypStudiow\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PopulateDimWydzial"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{67698abb-4c1a-4c22-8e9e-5716366cd7ec}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PopulateDimWydzial"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\PopulateDimWydzial\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimWydzial]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateDimWydzial\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Wydzial]"
+                      cachedDataType="i2"
+                      cachedName="ID_Wydzial"
+                      externalMetadataColumnId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Wydzial]"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Wydzial]" />
+                    <inputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NazwaWydzialu]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NazwaWydzialu"
+                      externalMetadataColumnId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NazwaWydzialu]"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].Columns[NazwaWydzialu]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Wydzial]"
+                      dataType="i2"
+                      name="ID_Wydzial" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NazwaWydzialu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="NazwaWydzialu" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PopulateDimWydzial\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\PopulateDimWydzial\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Wydzial]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateDimWydzial\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Wydzial]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Wydzial]"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Wydzial]"
+                      name="ID_Wydzial"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].Columns[NazwaWydzialu]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NazwaWydzialu]"
+                      length="50"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].Columns[NazwaWydzialu]"
+                      name="NazwaWydzialu"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Wydzial]"
+                      dataType="i2"
+                      name="ID_Wydzial" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NazwaWydzialu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="NazwaWydzialu" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Wydzial]"
+                      dataType="i2"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Wydzial]"
+                      name="ID_Wydzial" />
+                    <outputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NazwaWydzialu]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NazwaWydzialu]"
+                      name="NazwaWydzialu" />
+                    <outputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\PopulateDimWydzial.Paths[OLE DB Source Output]"
+              endId="Package\PopulateDimWydzial\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\PopulateDimWydzial\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PopulateFactPracaDyplomowa"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{50359996-3cfd-4c35-932e-29fa189b4c62}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PopulateFactPracaDyplomowa"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\PopulateFactPracaDyplomowa\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\PopulateFactPracaDyplomowa\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\Derived Column.Inputs[Derived Column Input].Columns[Data]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Data"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Data]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\PopulateFactPracaDyplomowa\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Output].Columns[ID_Data]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Output].Columns[ID_Data]"
+                      name="ID_Data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[YEAR](#{Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Data]}) * 10000 + [MONTH](#{Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Data]}) * 100 + [DAY](#{Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Data]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">YEAR(Data) * 10000 + MONTH(Data) * 100 + DAY(Data)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\PopulateFactPracaDyplomowa\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactPracaDyplomowa]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomoweDw]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Praca]"
+                      cachedDataType="i4"
+                      cachedName="ID_Praca"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Praca]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Praca]" />
+                    <inputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Temat]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="Temat"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Temat]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Temat]" />
+                    <inputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ocena]"
+                      cachedDataType="i2"
+                      cachedName="Ocena"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ocena]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ocena]" />
+                    <inputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_TypStudiow]"
+                      cachedDataType="i2"
+                      cachedName="ID_TypStudiow"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_TypStudiow]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_TypStudiow]" />
+                    <inputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Promotor]"
+                      cachedDataType="i4"
+                      cachedName="ID_Promotor"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Promotor]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Promotor]" />
+                    <inputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Wydzial]"
+                      cachedDataType="i2"
+                      cachedName="ID_Wydzial"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Wydzial]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Wydzial]" />
+                    <inputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Data]"
+                      cachedDataType="i4"
+                      cachedName="ID_Data"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Data]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Output].Columns[ID_Data]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Praca]"
+                      dataType="i4"
+                      name="ID_Praca" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Temat]"
+                      codePage="1250"
+                      dataType="str"
+                      length="500"
+                      name="Temat" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ocena]"
+                      dataType="i2"
+                      name="Ocena" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_TypStudiow]"
+                      dataType="i2"
+                      name="ID_TypStudiow" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Promotor]"
+                      dataType="i4"
+                      name="ID_Promotor" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Wydzial]"
+                      dataType="i2"
+                      name="ID_Wydzial" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Data]"
+                      dataType="i4"
+                      name="ID_Data" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\PopulateFactPracaDyplomowa\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[PracaDyplomowa]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Praca]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Praca]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Praca]"
+                      name="ID_Praca"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Temat]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Temat]"
+                      length="500"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Temat]"
+                      name="Temat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Data]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Data]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Data]"
+                      name="Data"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ocena]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Ocena]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ocena]"
+                      name="Ocena"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_TypStudiow]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_TypStudiow]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_TypStudiow]"
+                      name="ID_TypStudiow"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Promotor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Promotor]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Promotor]"
+                      name="ID_Promotor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Wydzial]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Wydzial]"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID_Wydzial]"
+                      name="ID_Wydzial"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Praca]"
+                      dataType="i4"
+                      name="ID_Praca" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Temat]"
+                      codePage="1250"
+                      dataType="str"
+                      length="500"
+                      name="Temat" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Data]"
+                      dataType="dbTimeStamp"
+                      name="Data" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Ocena]"
+                      dataType="i2"
+                      name="Ocena" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_TypStudiow]"
+                      dataType="i2"
+                      name="ID_TypStudiow" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Promotor]"
+                      dataType="i4"
+                      name="ID_Promotor" />
+                    <externalMetadataColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID_Wydzial]"
+                      dataType="i2"
+                      name="ID_Wydzial" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Praca]"
+                      dataType="i4"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Praca]"
+                      name="ID_Praca" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Temat]"
+                      codePage="1250"
+                      dataType="str"
+                      length="500"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Temat]"
+                      name="Temat" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Data]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Data]"
+                      name="Data" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Ocena]"
+                      dataType="i2"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Ocena]"
+                      name="Ocena" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_TypStudiow]"
+                      dataType="i2"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_TypStudiow]"
+                      name="ID_TypStudiow" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Promotor]"
+                      dataType="i4"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Promotor]"
+                      name="ID_Promotor" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Wydzial]"
+                      dataType="i2"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID_Wydzial]"
+                      name="ID_Wydzial" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\PopulateFactPracaDyplomowa.Paths[Derived Column Output]"
+              endId="Package\PopulateFactPracaDyplomowa\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\PopulateFactPracaDyplomowa\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\PopulateFactPracaDyplomowa.Paths[OLE DB Source Output]"
+              endId="Package\PopulateFactPracaDyplomowa\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\PopulateFactPracaDyplomowa\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{BFE9FE2D-7C57-4B1B-87F9-C49D2DA836D7}"
+      DTS:From="Package\PopulateDimStopienNaukowy"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\PopulateDimTypStudiow" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{C3B654A8-4317-4264-9CC6-915389710FFF}"
+      DTS:From="Package\PopulateDimTypStudiow"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\PopulateDimWydzial" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{173D8224-CCCB-4424-9692-C78689B6BCC9}"
+      DTS:From="Package\PopulateDimData"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\PopulateDimStopienNaukowy" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{A7E498C0-96A6-40CB-8DF3-4996FBC74CD2}"
+      DTS:From="Package\PopulateDimWydzial"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\PopulateDimOsoba" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{2360389A-0798-4D17-B5EC-6A2517118158}"
+      DTS:From="Package\PopulateDimOsoba"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\PopulateFactPracaDyplomowa" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{DA67A54C-5B99-45BB-AAFB-F2F421D6485A}"
+      DTS:From="Package\CreatePraceDyplomoweDw"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\PopulateDimData" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="206,42"
+          Id="Package\CreatePraceDyplomoweDw"
+          TopLeft="76,297" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\PopulateDimStopienNaukowy"
+          TopLeft="301,411" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\PopulateDimData"
+          TopLeft="74,409" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="234,431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67,0"
+              Start="0,0"
+              End="59.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="59.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="193,42"
+          Id="Package\PopulateDimTypStudiow"
+          TopLeft="596,411" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="518,432">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78,0"
+              Start="0,0"
+              End="70.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="70.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174,45"
+          Id="Package\PopulateDimWydzial"
+          TopLeft="82,485" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="692.5,453">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-523.5,32"
+              Start="0,0"
+              End="-523.5,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12"
+                    Point2="0,16"
+                    Point3="-4,16" />
+                  <mssgle:LineSegment
+                    End="-519.5,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-519.5,16"
+                    Point2="-523.5,16"
+                    Point3="-523.5,20" />
+                  <mssgle:LineSegment
+                    End="-523.5,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\PopulateDimOsoba"
+          TopLeft="299,487" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="256,507.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43,0"
+              Start="0,0"
+              End="35.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="35.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="220,42"
+          Id="Package\PopulateFactPracaDyplomowa"
+          TopLeft="521,488" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="467,508.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54,0"
+              Start="0,0"
+              End="46.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="179,339">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25,70"
+              Start="0,0"
+              End="-25,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="-4,35" />
+                  <mssgle:LineSegment
+                    End="-21,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21,35"
+                    Point2="-25,35"
+                    Point3="-25,39" />
+                  <mssgle:LineSegment
+                    End="-25,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\PopulateDimStopienNaukowy">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\PopulateDimStopienNaukowy\OLE DB Source"
+          TopLeft="68,35" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\PopulateDimStopienNaukowy\OLE DB Destination"
+          TopLeft="120,191" />
+        <EdgeLayout
+          Id="Package\PopulateDimStopienNaukowy.Paths[OLE DB Source Output]"
+          TopLeft="143,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.5,114"
+              Start="0,0"
+              End="62.5,106.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53"
+                    Point2="0,57"
+                    Point3="4,57" />
+                  <mssgle:LineSegment
+                    End="58.5,57" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.5,57"
+                    Point2="62.5,57"
+                    Point3="62.5,61" />
+                  <mssgle:LineSegment
+                    End="62.5,106.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateDimStopienNaukowy\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateDimStopienNaukowy\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\PopulateDimTypStudiow">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\PopulateDimTypStudiow\OLE DB Destination"
+          TopLeft="120,191" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\PopulateDimTypStudiow\OLE DB Source"
+          TopLeft="68,35" />
+        <EdgeLayout
+          Id="Package\PopulateDimTypStudiow.Paths[OLE DB Source Output]"
+          TopLeft="143,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.5,114"
+              Start="0,0"
+              End="62.5,106.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53"
+                    Point2="0,57"
+                    Point3="4,57" />
+                  <mssgle:LineSegment
+                    End="58.5,57" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.5,57"
+                    Point2="62.5,57"
+                    Point3="62.5,61" />
+                  <mssgle:LineSegment
+                    End="62.5,106.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateDimTypStudiow\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateDimTypStudiow\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\PopulateDimWydzial">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\PopulateDimWydzial\OLE DB Destination"
+          TopLeft="120,191" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\PopulateDimWydzial\OLE DB Source"
+          TopLeft="68,35" />
+        <EdgeLayout
+          Id="Package\PopulateDimWydzial.Paths[OLE DB Source Output]"
+          TopLeft="143,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.5,114"
+              Start="0,0"
+              End="62.5,106.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53"
+                    Point2="0,57"
+                    Point3="4,57" />
+                  <mssgle:LineSegment
+                    End="58.5,57" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.5,57"
+                    Point2="62.5,57"
+                    Point3="62.5,61" />
+                  <mssgle:LineSegment
+                    End="62.5,106.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateDimWydzial\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateDimWydzial\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\PopulateDimOsoba">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\PopulateDimOsoba\OLE DB Destination"
+          TopLeft="120,191" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\PopulateDimOsoba\OLE DB Source"
+          TopLeft="68,35" />
+        <EdgeLayout
+          Id="Package\PopulateDimOsoba.Paths[OLE DB Source Output]"
+          TopLeft="143,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.5,114"
+              Start="0,0"
+              End="62.5,106.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53"
+                    Point2="0,57"
+                    Point3="4,57" />
+                  <mssgle:LineSegment
+                    End="58.5,57" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.5,57"
+                    Point2="62.5,57"
+                    Point3="62.5,61" />
+                  <mssgle:LineSegment
+                    End="62.5,106.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateDimOsoba\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateDimOsoba\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\PopulateFactPracaDyplomowa">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\PopulateFactPracaDyplomowa\OLE DB Destination"
+          TopLeft="120,191" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\PopulateFactPracaDyplomowa\OLE DB Source"
+          TopLeft="68,35" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\PopulateFactPracaDyplomowa\Derived Column"
+          TopLeft="279,92" />
+        <EdgeLayout
+          Id="Package\PopulateFactPracaDyplomowa.Paths[OLE DB Source Output]"
+          TopLeft="218,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61,57"
+              Start="0,0"
+              End="53.5,57">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.5,0"
+                    Point2="30.5,0"
+                    Point3="30.5,4" />
+                  <mssgle:LineSegment
+                    End="30.5,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.5,53"
+                    Point2="30.5,57"
+                    Point3="34.5,57" />
+                  <mssgle:LineSegment
+                    End="53.5,57" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PopulateFactPracaDyplomowa.Paths[Derived Column Output]"
+          TopLeft="356,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-150.5,57"
+              Start="0,0"
+              End="-150.5,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="-4,28.5" />
+                  <mssgle:LineSegment
+                    End="-146.5,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-146.5,28.5"
+                    Point2="-150.5,28.5"
+                    Point3="-150.5,32.5" />
+                  <mssgle:LineSegment
+                    End="-150.5,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateFactPracaDyplomowa\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PopulateFactPracaDyplomowa\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
