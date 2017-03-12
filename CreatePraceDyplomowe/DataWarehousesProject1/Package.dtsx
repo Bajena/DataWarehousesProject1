@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-6KEOPAN\Janek"
   DTS:DTSID="{FAD3C5D5-08F5-4E42-81DA-4F36C4266ADC}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="82"
-  DTS:VersionGUID="{9B368DDE-0225-422C-BAE0-95C824F52CDB}">
+  DTS:VersionBuild="88"
+  DTS:VersionGUID="{2A5791E2-51B7-4B2C-B008-739CD7460616}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Autor.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\Autor.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -37,7 +37,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Osoba"
-              DTS:DTSID="{9800AF94-3723-4668-A436-CDD20F73215A}"
+              DTS:DTSID="{B3FA22B8-3819-4FE9-B5EF-2060BCE7BE8F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -45,55 +45,10 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Praca"
-              DTS:DTSID="{85732CAA-3F32-47F9-A9FD-0C779F6DE11C}"
+              DTS:DTSID="{9B270B78-67B0-4631-9116-2FF4CC046BD8}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[AutorOutManager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{7C102622-E6C1-4A92-A3A0-DE9525B7CE7E}"
-      DTS:ObjectName="AutorOutManager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1045"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Desktop\AutorOut.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ID_Osoba"
-              DTS:DTSID="{84F9A7B7-F673-4417-810D-A1058D7E15AC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ID_Praca"
-              DTS:DTSID="{C84630CD-6807-44C3-B99E-D625F3C717C4}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{E16AC272-F085-49A2-934F-89C709DCFF6A}"
-      DTS:ObjectName="DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN\SQLEXPRESS;Initial Catalog=PraceDyplomowe;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -110,7 +65,7 @@
           DTS:RowDelimiter="_x000D__x000A_"
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Osoba.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\Osoba.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -118,7 +73,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Osoba"
-              DTS:DTSID="{61FF895A-AC93-4A19-9686-790BB6CA42BB}"
+              DTS:DTSID="{121515CA-4238-4059-B274-451DA20D4E6F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -127,7 +82,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Imie"
-              DTS:DTSID="{4EF1BB54-9C1F-4F5D-9BFF-C2149FFAD418}"
+              DTS:DTSID="{BD214430-E7BC-44F0-ABBB-566DE9F8D970}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -136,7 +91,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nazwisko"
-              DTS:DTSID="{949E3951-4212-4F86-8190-B4BE48C7B381}"
+              DTS:DTSID="{A6C52D63-8C7F-423F-B2F0-C58DC20722BE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -144,61 +99,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Stopien"
-              DTS:DTSID="{B8EDCCF4-9144-44F5-8DBA-57E6FED7632A}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[OsobaDestinationConnectionManager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{F485BC75-8D9A-4664-B399-1C5821A51552}"
-      DTS:ObjectName="OsobaDestinationConnectionManager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1045"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Desktop\OsobaFormatted.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="2"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Id"
-              DTS:DTSID="{EB7CFDE2-2AAE-4E5A-BB08-45233EA67BE5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="25"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Imie"
-              DTS:DTSID="{FA3CC8A2-661D-484E-A023-8950D7D0304B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Nazwisko"
-              DTS:DTSID="{1E69C4A6-629F-44A7-9784-6B28F4408023}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="16"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Stopien"
-              DTS:DTSID="{5124B1F9-C8AF-48D5-8412-BE64C154E015}"
+              DTS:DTSID="{F990CCA5-38C7-4171-8EB4-38743182CDA1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -217,7 +118,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\PracaDyplomowa.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\PracaDyplomowa.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -225,7 +126,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Praca"
-              DTS:DTSID="{77992289-8D1F-4181-BECC-EB31D8655992}"
+              DTS:DTSID="{A20D2ED9-265B-4389-A39B-895D8010A12C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -234,7 +135,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Temat"
-              DTS:DTSID="{B8130E23-8842-49A8-8080-1F6FE33B23CC}"
+              DTS:DTSID="{7D9117F5-2145-4717-9409-0F4AFBC6D8FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -243,7 +144,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Data"
-              DTS:DTSID="{7FB3BED9-ADA5-4CE9-9FEB-36AE6D5CBAEA}"
+              DTS:DTSID="{9D19FBDB-0CE8-44C8-9898-1895B414CE76}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -251,7 +152,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Ocena"
-              DTS:DTSID="{41437A1A-56F4-41C5-9351-66DBB889B9B3}"
+              DTS:DTSID="{17302701-264C-4892-9D4B-D873E987BC93}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -259,7 +160,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_TypStudiow"
-              DTS:DTSID="{729C7BB1-D489-4A4D-9EF5-A07A7FF5492B}"
+              DTS:DTSID="{C5E9E353-235C-491E-90D5-C99C3C1875A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -267,7 +168,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Promotor"
-              DTS:DTSID="{463A5ACD-758D-477F-BF34-B3ABC5D28220}"
+              DTS:DTSID="{2B0AE7F3-1DDC-43E9-9B3B-6A7F55EC63D7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -275,10 +176,20 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Wydzial"
-              DTS:DTSID="{B3186F6B-F78B-4C8A-8138-5A78A748E9D6}"
+              DTS:DTSID="{427484CB-BAA1-42D8-BB90-02E075B78540}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PraceDyplomowe]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E16AC272-F085-49A2-934F-89C709DCFF6A}"
+      DTS:ObjectName="PraceDyplomowe">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN;Initial Catalog=PraceDyplomowe;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -288,7 +199,7 @@
       DTS:ObjectName="PraceDyplomoweConnection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN\SQLEXPRESS;Integrated Security=SSPI;Connect Timeout=30;" />
+          DTS:ConnectionString="Data Source=DESKTOP-6KEOPAN;Initial Catalog=PraceDyplomowe;Integrated Security=True;Connect Timeout=30;Application Name=SSIS-Package-{8E18D596-01C6-4739-8912-5902478A0EB3}PraceDyplomoweConnection;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -304,7 +215,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Recenzja.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\Recenzja.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -312,7 +223,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Osoba"
-              DTS:DTSID="{625B57DB-38DE-40AF-BD5E-ABFFA4130E75}"
+              DTS:DTSID="{8E5DF426-F484-4A7C-8A73-C1F7C15EF1A1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -320,7 +231,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Praca"
-              DTS:DTSID="{EF5C9072-E406-4045-9354-FCF66BF05E90}"
+              DTS:DTSID="{FB59D94B-9FA5-479A-BD94-6D18353D0E38}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -339,7 +250,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Slownik.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\Slownik.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -347,7 +258,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_SlowoKluczowe"
-              DTS:DTSID="{9575F150-FCEA-4213-84CB-D8F81A029F58}"
+              DTS:DTSID="{1F3574E7-FD97-478B-B89F-D52755546730}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -355,7 +266,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Praca"
-              DTS:DTSID="{1CF4F228-F37B-4F2B-8A36-F496D96CD709}"
+              DTS:DTSID="{7B12E485-AE0E-467D-8A96-053488AFA818}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -374,7 +285,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\SlowoKluczowe.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\SlowoKluczowe.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -382,7 +293,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_SlowoKluczowe"
-              DTS:DTSID="{1C858B3F-6266-4E0E-88A8-AD7B64973BCE}"
+              DTS:DTSID="{E483CC4B-CA1F-4CEA-9C98-5CD8C3024AD1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -391,7 +302,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SlowoKluczowe"
-              DTS:DTSID="{5EEE63EB-1BBE-4BDC-851D-54B513D117F1}"
+              DTS:DTSID="{EBF98570-E7B9-4A99-B72C-EFA690213DB1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -410,7 +321,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\StopienNaukowy.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\StopienNaukowy.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -418,7 +329,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Stopien"
-              DTS:DTSID="{80E0C8CC-D93E-4E53-A3E2-48C913A1C323}"
+              DTS:DTSID="{11C0C2DA-09D9-4470-80AD-5346D40FACA0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -427,7 +338,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Stopien"
-              DTS:DTSID="{DEE71DBA-4D8A-4D77-8ACF-206FE0D39890}"
+              DTS:DTSID="{1DD6FEFB-5DA9-4D14-86F6-70D1167F1D49}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -446,7 +357,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\TypStudiow.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\TypStudiow.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -454,7 +365,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_TypStudiow"
-              DTS:DTSID="{715E5E2F-6855-4AF9-B9FA-BBD15F239580}"
+              DTS:DTSID="{F6D2D3A2-DA74-44AC-9885-BF1425089AC8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -463,7 +374,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NazwaTypu"
-              DTS:DTSID="{67A88D0B-6F4D-4E1D-B1A0-6C2B92FC16CC}"
+              DTS:DTSID="{D4C36167-183D-4D68-989E-19B1ED5F08F8}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -482,7 +393,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\FlatFiles\Wydzial.txt">
+          DTS:ConnectionString="C:\Users\Janek\Documents\GitHub\DataWarehousesProject1\CreatePraceDyplomowe\FlatFiles\Wydzial.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -490,7 +401,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="ID_Wydzial"
-              DTS:DTSID="{316D7797-6811-4230-8204-AB911FCD51E8}"
+              DTS:DTSID="{FBF454A9-4BB7-4EA1-B7BB-B1688741B58F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -499,7 +410,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NazwaWydzialu"
-              DTS:DTSID="{53F007C9-F4C1-4CDE-81C5-79971DA6EBA8}"
+              DTS:DTSID="{A48AFABF-F6E9-4889-861B-CFFF04FD75B9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -730,8 +641,8 @@
               <connections>
                 <connection
                   refId="Package\ImportAutor\SQL Server Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1020,8 +931,8 @@
               <connections>
                 <connection
                   refId="Package\ImportOsoba\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2755,8 +2666,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\ImportPraca\SQL Server Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3157,8 +3068,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\ImportRecenzja\SQL Server Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3500,8 +3411,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\ImportSlownik\SQL Server Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3758,8 +3669,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\ImportSlowoKluczowe\SQL Server Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4015,8 +3926,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\ImportStopienNaukowy\SQL Server Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4272,8 +4183,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\ImportTypStudiow\SQL Server Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4605,8 +4516,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\ImportWydzial\SQL Server Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6KEOPAN\SQLEXPRESS.PraceDyplomowe]"
+                  connectionManagerID="Package.ConnectionManagers[PraceDyplomowe]"
+                  connectionManagerRefId="Package.ConnectionManagers[PraceDyplomowe]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5430,13 +5341,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Id="Package\ImportSlownik\SQL Server Destination"
           TopLeft="492,236" />
         <NodeLayout
-          Size="151,42"
-          Id="Package\ImportSlownik\Flat File Source"
-          TopLeft="44,50" />
-        <NodeLayout
           Size="155,42"
           Id="Package\ImportSlownik\Conditional Split"
           TopLeft="154,184" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\ImportSlownik\Flat File Source"
+          TopLeft="44,50" />
         <EdgeLayout
           Id="Package\ImportSlownik.Paths[Flat File Source Output]"
           TopLeft="119.5,92">
@@ -5468,7 +5379,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5642,7 +5555,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     design-time-name="Package\ImportTypStudiow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="188,42"
           Id="Package\ImportTypStudiow\SQL Server Destination"
@@ -5682,9 +5595,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
