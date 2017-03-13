@@ -27,6 +27,14 @@
       <Name>Dim Data.dim</Name>
       <FullPath>Dim Data.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Typ Studiow.dim</Name>
+      <FullPath>Dim Typ Studiow.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Osoba.dim</Name>
+      <FullPath>Dim Osoba.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>

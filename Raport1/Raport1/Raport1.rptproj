@@ -13,6 +13,10 @@
       <Name>Liczba_Srednia_Rok_Kwartal.rdl</Name>
       <FullPath>Liczba_Srednia_Rok_Kwartal.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Stopien_Srednia_Wydzial.rdl</Name>
+      <FullPath>Stopien_Srednia_Wydzial.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
